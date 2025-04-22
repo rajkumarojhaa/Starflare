@@ -3,12 +3,13 @@ import React from "react";
 const Creator = () => {
   return (
     <div className="w-full min-h-screen relative overflow-x-hidden">
+      {/* Hero Section */}
       <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-1 mt-20 ">
         {/* Left Content */}
         <div className="flex-1 flex flex-col items-start text-left mx-5">
           {/* Heading */}
           <div className="text-center ">
-            <h2 className="text-xl md:text-4xl lg:text-4xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+            <h2 className="text-xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
               <span className="text-white">
                 Unlock Your Potential with Exclusive Brand Collaborations & UGC{" "}
               </span>
@@ -23,13 +24,13 @@ const Creator = () => {
             </h2>
           </div>
 
-          <p className="text-gray-300 sm:text-lg text-sm mb-2 max-w-2xl mx-auto">
+          <p className="text-gray-300 sm:text-lg text-sm py-3 max-w-2xl mx-2 lg:mx-5 md:mx-4 ">
             Starflare connects you with leading brands and simplifies every
             step, whether you’re an influencer or a UGC creator.
           </p>
 
           {/* Store Buttons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 mx-2 lg:mx-5 md:mx-4">
             <img
               src="/gplay.png"
               alt="Google Play"
@@ -76,7 +77,7 @@ const Creator = () => {
         {/* Heading */}
         <div className="text-start mb-10">
           <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-medium font-['Roboto'] leading-snug">
-            <span className="text-white"> Why Creators Love</span>
+            <span className="text-white mr-2"> Why Creators Love</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative  ">
               Starflare
             </span>
@@ -84,47 +85,63 @@ const Creator = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="flex flex-col gap-4 ">
-          {/* First Row Group */}
-          <div className="flex flex-col md:flex-row gap-4  lg:h-72 md:h-52 w-full">
-            {/* Image 1 */}
-            <div className="relative aspect-[4/3] w-full md:w-1/2">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:gap-4 xl:gap-6">
+            {/* Wide Image1*/}
+            <a
+              href="#"
+              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 shadow-lg sm:col-span-2 md:h-64"
+            >
               <img
                 src="/creator1.png"
+                loading="lazy"
                 alt="Creator 1"
-                className="w-full h-full object-fill rounded-lg"
+                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
               />
-            </div>
+              
+            </a>
 
-            {/* Image 2 */}
-            <div className="relative aspect-[4/3] w-full md:w-1/2">
+            {/* Small Image2 */}
+            <a
+              href="#"
+              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900  md:h-64"
+            >
               <img
                 src="/creator2.png"
+                loading="lazy"
                 alt="Creator 2"
-                className="w-full h-full object-fill rounded-lg"
+                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
               />
-            </div>
-          </div>
+  
+            </a>
 
-          {/* Second Row Group */}
-          <div className="flex flex-col md:flex-row gap-4 lg:h-72 md:h-52 w-full">
-            {/* Image 3 - Slightly Bigger */}
-            <div className="relative aspect-[4/3] w-full h-80 md:w-[38%]">
+            {/* Small Image3 */}
+            <a
+              href="#"
+              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 md:h-64"
+            >
               <img
                 src="/creator3.png"
+                loading="lazy"
                 alt="Creator 3"
-                className="w-full h-full object-fill rounded-lg"
+                className="absolute inset-0 h-full  w-full object-fill object-center transition duration-200 group-hover:scale-110"
               />
-            </div>
 
-            {/* Image 4 - Slightly Smaller */}
-            <div className="relative aspect-[4/2] w-full -mt-12 sm:mt-0 h-64 md:w-[60%]">
+            </a>
+
+            {/* Wide Image4 */}
+            <a
+              href="#"
+              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 sm:col-span-2 md:h-64"
+            >
               <img
                 src="/creator4.png"
+                loading="lazy"
                 alt="Creator 4"
-                className="w-full h-full object-fill rounded-lg"
+                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
               />
-            </div>
+
+            </a>
           </div>
         </div>
       </div>
@@ -224,37 +241,35 @@ const Creator = () => {
 
       {/* Join The Future */}
       <div className="flex-1 flex flex-col items-center text-center mx-5">
-          {/* Heading */}
-          <div className="text-center ">
-            <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
-              <span className="text-white mr-2">
-              Join the Future of
-              </span>
-              <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
+        {/* Heading */}
+        <div className="text-center ">
+          <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+            <span className="text-white mr-2">Join the Future of</span>
+            <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
               Creator
-                <img
-                  src="/Vector.svg"
-                  alt="Decorative Vector"
-                  className="mx-auto sm:-mt-2 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
-                />
-              </span>
-              <span className="text-white">Monetization</span>
-            </h2>
-          </div>
-          {/* Store Buttons */}
-          <div className="flex gap-4 mt-10">
-            <img
-              src="/gplay.png"
-              alt="Google Play"
-              className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
-            />
-            <img
-              src="/appstore.png"
-              alt="App Store"
-              className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
-            />
-          </div>
+              <img
+                src="/Vector.svg"
+                alt="Decorative Vector"
+                className="mx-auto sm:-mt-2 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+              />
+            </span>
+            <span className="text-white">Monetization</span>
+          </h2>
         </div>
+        {/* Store Buttons */}
+        <div className="flex gap-4 mt-10">
+          <img
+            src="/gplay.png"
+            alt="Google Play"
+            className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
+          />
+          <img
+            src="/appstore.png"
+            alt="App Store"
+            className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
+          />
+        </div>
+      </div>
     </div>
   );
 };
