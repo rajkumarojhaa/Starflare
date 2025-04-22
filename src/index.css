@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 @keyframes scroll-left {
     0% {
       transform: translateX(0%);
@@ -9,3 +18,22 @@
     }
   }
   
+  /* Smooth scroll behavior for entire page */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* Fallback for browsers not supporting smooth-scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.container-class {
+  overflow-x: hidden;
+  will-change: transform;
+}

@@ -14,7 +14,7 @@ const Footer = () => {
   <img
     src="/ellipse100.png"
     alt="Ellipse Glow"
-    className="absolute left-1/2 top-1/2 w-full h-[800px] transform -translate-x-1/2 -translate-y-1/2 object-contain  z-0 pointer-events-none"
+    className="absolute left-1/2 top-[48%] sm:top-1/2 w-full max-w-[1500px] h-[850px] sm:h-[350px] md:h-[650px] lg:h-[600px] xl:h-[600px] transform -translate-x-1/2 -translate-y-1/2 sm:object-cover object:fill z-0 pointer-events-none"
   />
 
   {/* Footer Content */}

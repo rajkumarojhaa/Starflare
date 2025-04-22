@@ -29,7 +29,6 @@ const LandingPage = () => {
     },
   ];
 
-
   const userTypes = [
     {
       title: "Company",
@@ -46,8 +45,6 @@ const LandingPage = () => {
         "Secure collaborations and manage partnerships in one place.",
     },
   ];
-
- 
 
   // counting from to the number for the stats
 
@@ -95,29 +92,31 @@ const LandingPage = () => {
         </video>
         {/* Banner Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center z-10 px-6">
-  <div className="w-full max-w-5xl flex flex-col items-center text-center">
-    <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
-      <span className="text-white">Start Your Growth with </span>
-      <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
-        Starflare
-        <img
-          src="/Vector.svg"
-          alt="Decorative Vector"
-          className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
-        />
-      </span>
-    </h2>
-  </div>
+          <div className="w-full max-w-5xl flex flex-col items-center text-center">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
+              <span className="text-white">The smarter way to scale with </span>
+              <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
+                creators
+                <img
+                  src="/Vector.svg"
+                  alt="Decorative Vector"
+                  className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+                />
+              </span>
+            </h2>
+            <p className="text-gray-300 sm:text-lg text-sm max-w-2xl mx-2 lg:mx-5 md:mx-4 ">
+            Bringing performance to the creator economy
+            </p>
+          </div>
 
-  {/* Book Demo Button */}
-  <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
-    <div className="px-6 py-4 bg-white/30 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
-      <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-      <div className="text-white text-sm font-medium">Book Demo</div>
-    </div>
-  </div>
-</div>
-
+          {/* Book Demo Button */}
+          <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
+            <div className="px-6 py-4 bg-white/30 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+              <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
+              <div className="text-white text-sm font-medium">Book Demo</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Creators Trusted Brands */}
