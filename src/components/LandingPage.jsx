@@ -28,20 +28,7 @@ const LandingPage = () => {
         "Filter and connect with verified creators who align with your brand.",
     },
   ];
-  const brands = [
-    "Landingpage/Logos/Logo1.png",
-    "Landingpage/Logos/Logo2.png",
-    "Landingpage/Logos/Logo3.png",
-    "Landingpage/Logos/Logo4.png",
-    "Landingpage/Logos/Logo5.png",
-    "Landingpage/Logos/Logo6.png",
-    "Landingpage/Logos/Logo1.png",
-    "Landingpage/Logos/Logo2.png",
-    "Landingpage/Logos/Logo3.png",
-    "Landingpage/Logos/Logo4.png",
-    "Landingpage/Logos/Logo5.png",
-    "Landingpage/Logos/Logo6.png",
-  ];
+
 
   const userTypes = [
     {
@@ -60,7 +47,7 @@ const LandingPage = () => {
     },
   ];
 
-  const allLogos = [...brands, ...brands];
+ 
 
   // counting from to the number for the stats
 
@@ -108,28 +95,29 @@ const LandingPage = () => {
         </video>
         {/* Banner Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center z-10 px-6">
-          <div className="w-full max-w-5xl flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
-              <span className="text-white">Start Your Growth with </span>
-              <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
-                Starflare
-                <img
-                  src="/Vector.svg"
-                  alt="Decorative Vector"
-                  className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
-                />
-              </span>
-            </h2>
-          </div>
+  <div className="w-full max-w-5xl flex flex-col items-center text-center">
+    <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
+      <span className="text-white">Start Your Growth with </span>
+      <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
+        Starflare
+        <img
+          src="/Vector.svg"
+          alt="Decorative Vector"
+          className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+        />
+      </span>
+    </h2>
+  </div>
 
-          {/* Book Demo Button Styled with Icon */}
-          <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
-            <div className="px-6 py-4 bg-white/30 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
-              <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-              <div className="text-white text-sm font-medium">Book Demo</div>
-            </div>
-          </div>
-        </div>
+  {/* Book Demo Button */}
+  <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
+    <div className="px-6 py-4 bg-white/30 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+      <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
+      <div className="text-white text-sm font-medium">Book Demo</div>
+    </div>
+  </div>
+</div>
+
       </div>
 
       {/* Creators Trusted Brands */}
@@ -233,7 +221,7 @@ const LandingPage = () => {
       </section>
 
       {/* Aru U */}
-      <div className="font-roboto min-h-[100vh] w-full  py-24 px-6 text-white bg-[#181818] text-center justify-items-center">
+      <div className="font-roboto  w-full  py-24 px-6 text-white bg-[#181818] text-center justify-items-center">
         <h2 className="text-3xl md:text-5xl font-medium text-center mb-16">
           Are You ?
         </h2>
@@ -255,94 +243,81 @@ const LandingPage = () => {
       </div>
 
       {/* Are u a creator */}
-      <div className="flex flex-col md:flex-row items-center justify-between min-h-screen bg-[#181818] text-white px-4 sm:px-8 md:px-16 py-12 font-roboto">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#181818] text-white px-4 sm:px-8 md:px-10 pt-12 pb-4 md:py-12 font-roboto overflow-x-hidden mx-4 sm:mx-6 md:mx-0">
         {/* LEFT SIDE */}
-        <div className="flex-1 text-center md:text-left space-y-6 mb-12 md:mb-0">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
-            ARE YOU A <br />
-            <div className="inline-flex flex-col items-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D366C1] to-[#0C8AA3]">
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2">
+          {/* Heading */}
+          <div className="w-full">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-[72px]">
+              <span className="text-white">ARE YOU A </span>
+              <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
                 CREATOR
+                <img
+                  src="/Vector.svg"
+                  alt="Decorative Vector"
+                  className="mx-auto sm:-mt-2 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+                />
               </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 226 21"
-                fill="none"
-                className="w-40 sm:w-44 md:w-52 h-auto mt-1"
-              >
-                <g clipPath="url(#clip0_7098_529)">
-                  <path
-                    d="M225.406 20.0786C225.246 20.6959 224.497 21.1366 223.82 20.96C205.517 16.3432 189.837 11.9125 160.406 9.10293C113.335 4.62293 65.7767 6.78021 19.5701 13.2998C17.143 13.3682 0.440765 16.8252 0.514421 14.4166C0.240843 12.1559 3.92888 12.3627 5.70538 11.6738C11.461 10.3057 17.2974 9.23498 23.1372 8.20407C65.0489 1.13566 107.838 -0.592068 150.391 0.407022C166.59 1.06089 182.954 1.99157 198.707 5.67134C201.983 6.67521 206.211 7.13657 208.384 9.79021C209.57 11.9029 206.208 13.1566 205.959 10.7638C202.857 8.90725 199.065 8.28043 195.533 7.36884C175.443 3.36293 152.513 2.52293 132.051 2.53884C98.4868 2.46725 64.8613 4.15043 31.7391 9.25407C80.371 3.45998 130.081 2.10134 178.668 8.8993C196.943 11.3493 212.884 15.6988 224.434 18.6388C224.772 18.7154 225.063 18.9092 225.245 19.1785C225.426 19.4477 225.484 19.771 225.406 20.0786Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_7098_529">
-                    <rect
-                      width="250"
-                      height="21"
-                      fill="white"
-                      transform="matrix(1 0 0 -1 0.5 21)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            ? <br />
-            START TODAY
-          </h2>
+              <span className="text-white"> ? START TODAY</span>
+            </h2>
+          </div>
 
-          {/* App Buttons */}
-          <div className="flex justify-center md:justify-start gap-4 pt-4">
+          {/* Store Buttons */}
+          <div className="flex gap-4 mt-6 justify-center md:justify-start w-full">
             <img
               src="/gplay.png"
               alt="Google Play"
-              className="h-10 sm:h-12"
+              className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
             />
             <img
               src="/appstore.png"
               alt="App Store"
-              className="h-10 sm:h-12"
+              className="sm:h-12 h-8 w-auto object-contain cursor-pointer"
             />
           </div>
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="w-full md:w-[50%] grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Fitness Influencer */}
-          <div className="relative">
-            <img
-              src="/Landingpage/common/img3.png"
-              alt="Fitness Influencer"
-              className="rounded-xl w-full h-auto object-cover"
-            />
-            <span className="absolute top-2 left-2 bg-pink-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
-              Fitness Influencer
-            </span>
-          </div>
+        <div className="flex-1 flex justify-center w-full md:w-1/2 mt-8 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+            {/* Left Column */}
+            <div className="flex flex-col gap-4">
+              {/* Fitness Influencer */}
+              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] md:aspect-[3/2]">
+                <img
+                  src="/lp1.png"
+                  alt="Fitness Influencer"
+                  className="rounded-xl w-full h-full object-cover"
+                />
+                <span className="absolute top-2 left-2 bg-pink-500 text-white text-xs px-2 py-0.5 rounded-full shadow-md">
+                  Fitness Influencer
+                </span>
+              </div>
 
-          {/* Travel Influencer (Spans two rows on sm and up) */}
-          <div className="relative sm:row-span-2">
-            <img
-              src="/Landingpage/common/img3.png"
-              alt="Travel Influencer"
-              className="rounded-xl w-full h-auto object-cover"
-            />
-            <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow-md">
-              Travel Influencer
-            </span>
-          </div>
+              {/* Beauty Influencer */}
+              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] md:aspect-[3/2]">
+                <img
+                  src="/lp2.png"
+                  alt="Beauty Influencer"
+                  className="rounded-xl w-full h-full object-cover"
+                />
+                <span className="absolute bottom-2 left-2 bg-purple-500 text-white text-xs px-2 py-0.5 rounded-full shadow-md">
+                  Beauty Influencer
+                </span>
+              </div>
+            </div>
 
-          {/* Beauty Influencer */}
-          <div className="relative">
-            <img
-              src="/Landingpage/common/img3.png"
-              alt="Beauty Influencer"
-              className="rounded-xl w-full h-auto object-cover"
-            />
-            <span className="absolute bottom-2 left-2 bg-purple-500 text-white text-xs px-3 py-1 rounded-full shadow-md">
-              Beauty Influencer
-            </span>
+            {/* Right Column - Travel Influencer */}
+            <div className="relative w-full aspect-[4/3] sm:aspect-[3/4] md:aspect-[3/5]">
+              <img
+                src="/lp3.png"
+                alt="Travel Influencer"
+                className="rounded-xl w-full h-full object-cover"
+              />
+              <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded-full shadow-md">
+                Travel Influencer
+              </span>
+            </div>
           </div>
         </div>
       </div>
