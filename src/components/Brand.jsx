@@ -50,12 +50,12 @@ const Brand = () => {
 
         {/* Animated Heading */}
         <motion.div
-            className="relative w-full h-20 sm:h-48 md:h-48 lg:h-52 rounded-xl overflow-hidden"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-          >
+          className="relative w-full h-20 sm:h-48 md:h-48 lg:h-52 rounded-xl overflow-hidden"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           <h2 className="text-xl md:text-4xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px] sm:mx-20 md:mx-5 text-white">
             Power Your Brand with
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative ml-3">
@@ -67,12 +67,12 @@ const Brand = () => {
 
         {/* Animated Paragraph */}
         <motion.div
-            className="text-gray-300 sm:text-lg text-sm  mb-3 max-w-2xl mx-auto z-10"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-          >
+          className="text-gray-300 sm:text-lg text-sm  mb-3 max-w-2xl mx-auto z-10"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           Reach the right audience, streamline management, and maximize ROI—all
           in one platform.
         </motion.div>
@@ -102,9 +102,9 @@ const Brand = () => {
         <motion.div
           className="w-full flex flex-col items-center text-center gap-10 overflow-hidden pt-56"
           initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           <div className="w-full flex flex-col items-center text-center">
             <motion.h2
@@ -320,87 +320,88 @@ const Brand = () => {
 
       {/* Ready to Scale */}
       <section className="px-6 pt-20 text-center flex flex-col items-center gap-8">
-  <motion.div 
-    className="w-full max-w-7xl flex flex-col items-center"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    <motion.h2 
-      className="text-3xl md:text-4xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px]"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ staggerChildren: 0.3 }}
-    >
-      <motion.span 
-        className="text-white inline-block mr-3"
-        initial={{ y: 30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "backOut" }}
-      >
-        Ready to Scale Your{" "}
-      </motion.span>
+        <motion.div
+          className="w-full max-w-7xl flex flex-col items-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h2
+            className="text-3xl md:text-4xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.3 }}
+          >
+            <motion.span
+              className="text-white inline-block mr-3"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut" }}
+            >
+              Ready to Scale Your{" "}
+            </motion.span>
 
-      <motion.span
-        className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ 
-          type: "spring",
-          stiffness: 100,
-          damping: 15,
-          delay: 0.3
-        }}
-      >
-        Influencer
-        <motion.img
-          src="/Vector.svg"
-          alt="Decorative Vector"
-          className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
-          initial={{ rotate: -45, scale: 0 }}
-          whileInView={{ rotate: 0, scale: 1 }}
+            <motion.span
+              className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+                delay: 0.3,
+              }}
+            >
+              Influencer
+              <motion.img
+                src="/Vector.svg"
+                alt="Decorative Vector"
+                className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+                initial={{ rotate: -45, scale: 0 }}
+                whileInView={{ rotate: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 12,
+                  delay: 0.5,
+                }}
+              />
+            </motion.span>
+
+            <motion.span
+              className="text-white inline-block"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut", delay: 0.6 }}
+            >
+              {" "}
+              Marketing?
+            </motion.span>
+          </motion.h2>
+        </motion.div>
+
+        {/* Animated Book Demo Button */}
+        <motion.div
+          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             type: "spring",
-            stiffness: 80,
-            damping: 12,
-            delay: 0.5
+            stiffness: 100,
+            damping: 20,
+            delay: 0.8,
           }}
-        />
-      </motion.span>
-
-      <motion.span
-        className="text-white inline-block"
-        initial={{ y: 30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "backOut", delay: 0.6 }}
-      >
-        {" "}Marketing?
-      </motion.span>
-    </motion.h2>
-  </motion.div>
-
-  {/* Animated Book Demo Button */}
-  <motion.div
-    className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ 
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-      delay: 0.8
-    }}
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
-      <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-      <div className="text-white text-sm font-medium">Book Demo</div>
-    </div>
-  </motion.div>
-</section>
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+            <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
+            <div className="text-white text-sm font-medium">Book Demo</div>
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
 };

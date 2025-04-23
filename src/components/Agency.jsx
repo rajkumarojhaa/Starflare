@@ -1,38 +1,105 @@
 import React from "react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Agency = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true });
   return (
     <div className="w-full min-h-screen relative overflow-x-hidden">
       {/* Text Section */}
-      <div className="sm:pt-36 md:pt-32 pt-20 w-full text-center px-5 flex flex-col items-center">
-        <div className="text-center max-w-4xl py-10">
-          <h2 className="text-xl md:text-4xl lg:text-4xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
-            <span className="text-white">
+      <div className="px-6 pt-30 text-center flex flex-col items-center gap-8">
+        <motion.div
+          className="w-full max-w-7xl flex flex-col items-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h2
+            className="text-3xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[96px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.3 }}
+          >
+            <motion.span
+              className="text-white inline-block mr-3"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut" }}
+            >
               Streamline Your Agency’s Workflow with Seamless{" "}
-            </span>
-            <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
+            </motion.span>
+
+            <motion.span
+              className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+                delay: 0.3,
+              }}
+            >
               Campaign
-              <img
+              <motion.img
                 src="/Vector.svg"
                 alt="Decorative Vector"
-                className="mx-auto sm:-mt-2 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+                className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
+                initial={{ rotate: -45, scale: 0 }}
+                whileInView={{ rotate: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 12,
+                  delay: 0.5,
+                }}
               />
-            </span>
-            <span className="text-white">Management</span>
-          </h2>
-        </div>
+            </motion.span>
 
-        <p className="text-gray-300 sm:text-lg text-sm mb-2 max-w-2xl mx-auto">
+            <motion.span
+              className="text-white inline-block"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "backOut", delay: 0.6 }}
+            >
+              {" "}
+              Management
+            </motion.span>
+          </motion.h2>
+        </motion.div>
+        <motion.div
+          className="text-gray-300 sm:text-lg text-sm  mb-3 max-w-2xl mx-auto z-10"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           Manage influencers, execute brand campaigns, and track performance,
           effortlessly, all in one platform.
-        </p>
+        </motion.div>
 
-        <div className="relative group inline-flex rounded-4xl p-[1px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 z-10">
+        {/* Animated Book Demo Button */}
+        <motion.div
+          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 0.8,
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Image Section */}
@@ -56,35 +123,54 @@ const Agency = () => {
         </div>
 
         {/* Main Image */}
-        <div className="relative lg:w-[741.48px] lg:h-[550.79px] md:w-[450px] w-[220px] h-[150px]">
-          <img
+        <div
+          className="relative lg:w-[741.48px] lg:h-[550.79px] md:w-[450px] w-[220px] h-[150px]"
+          ref={containerRef}
+        >
+          {/* Main Image */}
+          <motion.img
             src="/big1.png"
             alt="Main"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.5 }}
             className="w-full h-full object-contain rounded-xl"
           />
 
           {/* Top-right small image */}
-          <div className="absolute lg:top-10 lg:-right-48 md:-right-24 md:-top-28 -top-8 -right-18 lg:w-72 sm:h-60 md:w-50 md:h-50  w-25 h-24">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+            className="absolute lg:top-10 lg:-right-48 md:-right-24 md:-top-28 -top-8 -right-18 lg:w-72 sm:h-60 md:w-50 md:h-50  w-25 h-24"
+          >
             <img
               src="/Group 1145.png"
               alt="Top Right"
               className="w-full h-full object-fill"
             />
-          </div>
+          </motion.div>
 
           {/* Bottom-left small image */}
-          <div className="absolute lg:-bottom-1 lg:-left-40 -bottom-5 -left-16 lg:w-72 lg:h-60 md:w-50 md:h-45 md:-bottom-24 md:-left-18 w-25 h-24">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.8 }}
+            className="absolute lg:-bottom-1 lg:-left-40 -bottom-5 -left-16 lg:w-72 lg:h-60 md:w-50 md:h-45 md:-bottom-24 md:-left-18 w-25 h-24"
+          >
             <img
               src="/Group 238355.png"
               alt="Bottom Left"
               className="w-full h-full object-fill"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Why Agencies Choose Starflare */}
-
       <div className="w-full flex flex-col items-center justify-center pt-10 px-5">
         {/* Heading */}
         <div className="text-center max-w-4xl pt-20">
@@ -105,12 +191,20 @@ const Agency = () => {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-5xl mx-auto">
           {/* Column 1 */}
           <div className="flex flex-col gap-4">
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               src="/Frame238107.png"
               alt="Image 1"
               className="w-full object-cover rounded-xl"
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               src="/Frame238412.png"
               alt="Image 2"
               className="w-full object-cover rounded-xl"
@@ -119,12 +213,20 @@ const Agency = () => {
 
           {/* Column 2 */}
           <div className="flex flex-col gap-4">
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               src="/Frame238109.png"
               alt="Image 3"
               className="w-full object-cover rounded-xl"
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               src="/Frame238110.png"
               alt="Image 4"
               className="w-full object-cover rounded-xl"
