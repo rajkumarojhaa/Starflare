@@ -59,7 +59,7 @@ const Creator = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
             viewport={{ once: false, amount: 0.5 }}
-            src="/phone.png"
+            src="/Creatorpage/phone.png"
             alt="Phone App Preview"
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain relative z-10"
           />
@@ -71,12 +71,12 @@ const Creator = () => {
         <div className="w-screen overflow-hidden relative">
           <div className="flex w-max animate-[scroll-left_30s_linear_infinite] gap-6">
             <img
-              src="/Component11.png"
+              src="/Creatorpage/Component11.png"
               alt="Brand"
               className="object-contain h-8 sm:h-8 md:h-10 lg:h-10 xl:h-10"
             />
             <img
-              src="/Component11.png"
+              src="/Creatorpage/Component11.png"
               alt="Brand"
               className="object-contain h-8 sm:h-8 md:h-10 lg:h-10 xl:h-10"
             />
@@ -127,7 +127,7 @@ const Creator = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     viewport={{ once: false, amount: 0.5 }}
-                    src="/group1.png"
+                    src="/Creatorpage/group1.png"
                     alt="Group Icon"
                     className="h-38 sm:h-38 md:h-42 lg:h-48 xl:h-52 w-auto"
                   />
@@ -163,7 +163,7 @@ const Creator = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     viewport={{ once: false, amount: 0.5 }}
-                    src="/group2.png"
+                    src="/Creatorpage/group2.png"
                     alt="Group 2"
                     className="h-30 sm:h-30 md:h-30 xl:h-40 lg:h-32 w-auto"
                   />
@@ -197,7 +197,7 @@ const Creator = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   viewport={{ once: false, amount: 0.5 }}
-                  src="/frame5.png"
+                  src="/Creatorpage/frame5.png"
                   alt="Frame 5"
                   className="h-25 sm:h-30 md:h-32 lg:h-34 xl:h-38 w-[65%] sm:w-[58%] lg:w-[64%] xl:w-[80%] md:w-[65%]"
                 />
@@ -206,7 +206,7 @@ const Creator = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                   viewport={{ once: false, amount: 0.5 }}
-                  src="/frame6.png"
+                  src="/Creatorpage/frame6.png"
                   alt="Frame 6"
                   className="lg:w-auto w-24 md:w-24 h-24 md:h-32 lg:h-34 xl:h-38 lg:mt-0 xl:mt-0 md:mt-0 md:ml-2 lg:ml-5 xl:ml-3 ml-2 mt-0"
                 />
@@ -239,7 +239,7 @@ const Creator = () => {
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: 0.9 }}
-                  src="/group3.png"
+                  src="/Creatorpage/group3.png"
                   alt="Frame 5"
                   className="h-24 md:h-28 lg:h-32 lg:w-[54%] md:w-[58%] w-[50%]"
                 />
@@ -252,7 +252,7 @@ const Creator = () => {
                     once: false,
                     amount: 0.5,
                   }}
-                  src="/frame4.png"
+                  src="/Creatorpage/frame4.png"
                   alt="Frame 6"
                   className="lg:w-auto xl:w-52 w-32 md:w-44 h-24 md:h-24 lg:h-30 lg:mt-0 md:-mt-0 md:ml-3 lg:ml-5 ml-5 mt-0"
                 />
@@ -332,7 +332,7 @@ const Creator = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 viewport={{ once: false, amount: 0.5 }}
-                src="/ellipse1.svg"
+                src="/Creatorpage/ellipse1.svg"
                 alt="Ellipse 1"
                 className="absolute sm:-top-14 sm:-left-20 md:-left-10 md:-top-10 -left-1 -top-8 w-15 h-15 md:w-20 md:h-20 lg:w-30 lg:h-30 z-20"
               />
@@ -341,16 +341,17 @@ const Creator = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
                   viewport={{ once: false, amount: 0.5 }}
-                  src="/ellipse2.svg"
+                  src="/Creatorpage/ellipse2.svg"
                   alt="Ellipse 2"
-                  className="absolute sm:-top-15 sm:right-[-20px] md:-top-10 right-1 -top-7 w-12 h-12 md:w-18 md:h-18 lg:w-20 lg:h-20 z-20"
+                  className="absolute top-[-30px] right-[10px] w-12 h-12 md:w-18 md:h-18 lg:w-20 lg:h-20 z-20"
+
                 />
               <motion.img
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
                 viewport={{ once: false, amount: 0.5 }}
-                src="/ellipse3.svg"
+                src="/Creatorpage/ellipse3.svg"
                 alt="Ellipse 3"
                 className="absolute bottom-[-20px] sm:left-12 md:left-5 left-8 w-10 h-10 md:h-15 md:w-15 lg:w-20 lg:h-20 z-20"
               />
@@ -364,7 +365,7 @@ const Creator = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
               ref={videoRef}
-              src="/vid2.mov"
+              src="/Creatorpage/vid2.mov"
               controls
               className="w-full h-auto rounded-lg relative z-10"
               onPlay={handlePlay}

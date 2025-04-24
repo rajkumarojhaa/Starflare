@@ -95,7 +95,7 @@ const Agency = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
+          <div className="px-6 py-4  rounded-3xl flex items-center gap-3 w-full h-full bg-white/10 hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
@@ -129,7 +129,7 @@ const Agency = () => {
         >
           {/* Main Image */}
           <motion.img
-            src="/big1.png"
+            src="/Agencypage/big1.png"
             alt="Main"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,7 +147,7 @@ const Agency = () => {
             className="absolute lg:top-10 lg:-right-48 md:-right-24 md:-top-28 -top-8 -right-18 lg:w-72 sm:h-60 md:w-50 md:h-50  w-25 h-24"
           >
             <img
-              src="/Group 1145.png"
+              src="/Agencypage/Group 1145.png"
               alt="Top Right"
               className="w-full h-full object-fill"
             />
@@ -162,7 +162,7 @@ const Agency = () => {
             className="absolute lg:-bottom-1 lg:-left-40 -bottom-5 -left-16 lg:w-72 lg:h-60 md:w-50 md:h-45 md:-bottom-24 md:-left-18 w-25 h-24"
           >
             <img
-              src="/Group 238355.png"
+              src="/Agencypage/Group 238355.png"
               alt="Bottom Left"
               className="w-full h-full object-fill"
             />
@@ -196,7 +196,7 @@ const Agency = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              src="/Frame238107.png"
+              src="/Agencypage/Frame238107.png"
               alt="Image 1"
               className="w-full object-cover rounded-xl"
             />
@@ -205,7 +205,7 @@ const Agency = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              src="/Frame238412.png"
+              src="/Agencypage/Frame238412.png"
               alt="Image 2"
               className="w-full object-cover rounded-xl"
             />
@@ -218,7 +218,7 @@ const Agency = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              src="/Frame238109.png"
+              src="/Agencypage/Frame238109.png"
               alt="Image 3"
               className="w-full object-cover rounded-xl"
             />
@@ -227,7 +227,7 @@ const Agency = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              src="/Frame238110.png"
+              src="/Agencypage/Frame238110.png"
               alt="Image 4"
               className="w-full object-cover rounded-xl"
             />
@@ -239,7 +239,7 @@ const Agency = () => {
       <section className="relative w-full mx-auto flex flex-col items-center text-center gap-10 overflow-hidden mt-20">
         {/* Top Left Star Image */}
         <img
-          src="/Star3.png"
+          src="/Agencypage/Star3.png"
           alt="Star"
           className="absolute top-0 left-0 ml-0 w-28 h-48 z-10"
         />
@@ -293,7 +293,7 @@ const Agency = () => {
           {/* Images Row */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 w-full">
             <img
-              src="/effort1.png"
+              src="/Agencypage/effort1.png"
               alt="Effort 1"
               className="w-full md:w-1/2 h-auto object-contain"
             />
@@ -302,7 +302,7 @@ const Agency = () => {
                 <div className="w-full h-80 bg-gradient-to-r from-pink-400 to-cyan-600 blur-[160px] opacity-60 rounded-3xl" />
               </div>
               <img
-                src="/effort2.png"
+                src="/Agencypage/effort2.png"
                 alt="Effort 2"
                 className="w-full min-h-[180px] sm:min-h-[200px] object-contain relative z-10"
               />
@@ -332,8 +332,8 @@ const Agency = () => {
       .gradient-border-wrapper {
         position: relative;
         display: inline-flex;
-        border-radius: 2rem; /* Same as Tailwind's rounded-4xl */
-        padding: 3px; /* Thickness of the border */
+        border-radius: 2rem; 
+        padding: 3px; 
         background: transparent;
       }
 

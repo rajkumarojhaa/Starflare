@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Brand = () => {
   const [activeCard, setActiveCard] = useState(0);
 
-  const images = ["/Frame238439.png", "/Group238394.png", "/Group238398.png"];
+  const images = ["/Brandpage/Frame238439.png", "/Brandpage/Group238394.png", "/Brandpage/Group238398.png"];
 
   const cards = [
     {
@@ -92,7 +92,7 @@ const Brand = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 duration-200">
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full  hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
@@ -185,12 +185,12 @@ const Brand = () => {
             viewport={{ once: false, amount: 0.5 }}
           >
             <img
-              src="/Frame 238094.png"
+              src="/Brandpage/Frame 238094.png"
               alt="Overlay"
               className="absolute top-0 left-1 w-12 sm:w-16 md:w-13 lg:w-20 z-10"
             />
             <img
-              src="/smframe1.png"
+              src="/Brandpage/smframe1.png"
               alt="Frame 1"
               className="w-full h-full object-fill rounded-xl"
             />
@@ -205,7 +205,7 @@ const Brand = () => {
             viewport={{ once: false, amount: 0.5 }}
           >
             <img
-              src="/smframe2.png"
+              src="/Brandpage/smframe2.png"
               alt="Frame 2"
               className="w-full h-full object-fill rounded-xl"
             />
@@ -220,7 +220,7 @@ const Brand = () => {
             viewport={{ once: false, amount: 0.5 }}
           >
             <img
-              src="/smframe3.png"
+              src="/Brandpage/smframe3.png"
               alt="Frame 3"
               className="w-full h-full object-fill rounded-xl"
             />
@@ -235,7 +235,7 @@ const Brand = () => {
             viewport={{ once: false, amount: 0.5 }}
           >
             <img
-              src="/smframe4.png"
+              src="/Brandpage/smframe4.png"
               alt="Frame 4"
               className="w-full h-full object-fill rounded-xl"
             />
@@ -396,7 +396,7 @@ const Brand = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full  hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
