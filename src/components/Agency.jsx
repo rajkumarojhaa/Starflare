@@ -82,7 +82,7 @@ const Agency = () => {
 
         {/* Animated Book Demo Button */}
         <motion.div
-          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600"
+          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 "
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,7 +95,7 @@ const Agency = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
@@ -324,14 +324,65 @@ const Agency = () => {
             </span>
             <span className="text-white">Today</span>
           </h2>
-        </div>
 
-        {/* Book Demo Button Styled with Icon */}
-        <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
-            <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-            <div className="text-white text-sm font-medium">Book Demo</div>
-          </div>
+          {/* Book Demo Button Styled with Icon */}
+          <>
+            <style>
+              {`
+      .gradient-border-wrapper {
+        position: relative;
+        display: inline-flex;
+        border-radius: 2rem; /* Same as Tailwind's rounded-4xl */
+        padding: 3px; /* Thickness of the border */
+        background: transparent;
+      }
+
+      .gradient-border-wrapper::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 3px;
+        background: linear-gradient(270deg, #ec4899, #06b6d4, #ec4899);
+        background-size: 400% 400%;
+        animation: moveBorder 6s ease infinite;
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: 0;
+      }
+
+      @keyframes moveBorder {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .gradient-border-content {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 1); /* bg-black */
+        border-radius: 1.75rem;
+      }
+    `}
+            </style>
+
+            <div className="gradient-border-wrapper mt-5">
+              <div className="gradient-border-content px-6 py-4 flex items-center gap-3 w-full h-full">
+                <img
+                  src="/contacts.svg"
+                  alt="Contact Icon"
+                  className="w-5 h-5"
+                />
+                <div className="text-white text-sm font-medium">Book Demo</div>
+              </div>
+            </div>
+          </>
         </div>
       </section>
     </div>

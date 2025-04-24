@@ -79,7 +79,7 @@ const Brand = () => {
 
         {/* Animated Book Demo Button */}
         <motion.div
-          className="relative group inline-flex rounded-4xl p-[1px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 z-10"
+          className="relative group inline-flex rounded-4xl p-[1px] transition-all duration-200  z-10"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -92,7 +92,7 @@ const Brand = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
@@ -158,7 +158,7 @@ const Brand = () => {
       </section>
 
       {/* Why Brands Choose Starflare Section */}
-      <section className="w-full pt-0 pb-30 p-5 flex flex-col md:flex-row items-center justify-between gap-0 max-w-7xl mx-auto">
+      <section className="w-full xl:pt-30 lg:pt-20 md:pt-15 sm:pt-10 pt-5 pb-30 p-5 flex flex-col md:flex-row items-center justify-between gap-0 max-w-7xl mx-auto">
         {/* Left - Text Section */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center">
           <h2 className="text-2xl md:text-4xl lg:text-4xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
@@ -383,7 +383,7 @@ const Brand = () => {
 
         {/* Animated Book Demo Button */}
         <motion.div
-          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600"
+          className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 "
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -396,7 +396,7 @@ const Brand = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
+          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600 transition-all duration-200">
             <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
             <div className="text-white text-sm font-medium">Book Demo</div>
           </div>
