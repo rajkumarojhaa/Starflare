@@ -11,7 +11,11 @@ import { useInView } from "react-intersection-observer";
 const LandingPage = () => {
   const [activeCard, setActiveCard] = useState(0);
 
-  const images = ["/Frame238439.png", "/Group238394.png", "/Group238398.png"];
+  const images = [
+    "/Brandpage/Frame238439.png",
+    "/Brandpage/Group238394.png",
+    "/Brandpage/Group238398.png",
+  ];
 
   const cards = [
     {
@@ -82,7 +86,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="font-['Roboto'] text-white">
+    <div className="font-['Roboto_Serif'] text-white">
       {/* 🎥 Video Banner */}
       <div className="relative w-full h-[60vh] md:h-[100vh] overflow-hidden">
         <video
@@ -92,13 +96,13 @@ const LandingPage = () => {
           muted
           playsInline
         >
-          <source src="/banner.mp4" type="video/mp4" />
+          <source src="/Landingpage/Vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Banner Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center z-10 px-6">
           <div className="w-full max-w-5xl flex flex-col items-center text-center">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px]">
               <span className="text-white">The smarter way to scale with </span>
               <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
                 creators
@@ -109,8 +113,9 @@ const LandingPage = () => {
                 />
               </span>
             </h2>
-            <p className="text-gray-300 sm:text-lg text-sm max-w-2xl mx-2 lg:mx-5 md:mx-4 ">
-            Bringing performance to the creator economy
+
+            <p className="text-gray-100 sm:text-lg text-sm max-w-2xl mx-2 lg:mx-5 md:mx-4 font-normal font-['Roboto_Serif']">
+              Bringing performance to the creator economy
             </p>
           </div>
 
@@ -118,7 +123,7 @@ const LandingPage = () => {
           <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
             <div className="px-6 py-4 bg-white/30 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
               <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-              <div className="text-white text-sm font-medium">Book Demo</div>
+              <div className="text-white text-sm font-medium font-['Roboto_Serif']">Book Demo</div>
             </div>
           </div>
         </div>
@@ -128,7 +133,7 @@ const LandingPage = () => {
       <div className="w-full flex flex-col items-center text-center gap-10 overflow-hidden pt-36">
         {/* Top Text */}
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">Creators</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Trusted
@@ -165,7 +170,7 @@ const LandingPage = () => {
       <section className="w-full px-4 sm:px-6 py-12 sm:py-20 md:py-24 max-w-7xl mx-auto flex flex-col items-center text-center gap-10">
         {/* Top Text */}
         <div className="w-full  flex flex-col items-center text-center px-2">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-snug md:leading-[96px] font-['Roboto']">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-snug md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">Seamless Collaboration with </span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Creators
@@ -247,12 +252,12 @@ const LandingPage = () => {
       </div>
 
       {/* Are u a creator */}
-      <div className="flex flex-col md:flex-row items-center justify-between bg-[#181818] text-white px-4 sm:px-8 md:px-10 pt-12 pb-4 md:py-12 font-roboto overflow-x-hidden mx-4 sm:mx-6 md:mx-0">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#181818] text-white px-4 sm:px-8 md:px-8 pt-12 pb-4 md:py-12 font-['Roboto_Serif'] overflow-x-hidden mx-4 sm:mx-6 md:mx-0">
         {/* LEFT SIDE */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2">
           {/* Heading */}
           <div className="w-full">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-[72px]">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl  font-medium leading-tight md:leading-[72px]">
               <span className="text-white">ARE YOU A </span>
               <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
                 CREATOR
@@ -283,13 +288,13 @@ const LandingPage = () => {
 
         {/* RIGHT SIDE */}
         <div className="flex-1 flex justify-center w-full md:w-1/2 mt-8 md:mt-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             {/* Left Column */}
             <div className="flex flex-col gap-4">
               {/* Fitness Influencer */}
-              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] md:aspect-[3/2]">
+              <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] md:aspect-[3/2] lg:aspect-[3/2] xl:aspect-[5/4]">
                 <img
-                  src="/lp1.png"
+                  src="/Landingpage/common/img3.png"
                   alt="Fitness Influencer"
                   className="rounded-xl w-full h-full object-cover"
                 />
@@ -301,7 +306,7 @@ const LandingPage = () => {
               {/* Beauty Influencer */}
               <div className="relative w-full aspect-[1/1] sm:aspect-[4/3] md:aspect-[3/2]">
                 <img
-                  src="/lp2.png"
+                  src="/Landingpage/common/img2.png"
                   alt="Beauty Influencer"
                   className="rounded-xl w-full h-full object-cover"
                 />
@@ -314,7 +319,7 @@ const LandingPage = () => {
             {/* Right Column - Travel Influencer */}
             <div className="relative w-full aspect-[4/3] sm:aspect-[3/4] md:aspect-[3/5]">
               <img
-                src="/lp3.png"
+                src="/Landingpage/common/img1.png"
                 alt="Travel Influencer"
                 className="rounded-xl w-full h-full object-cover"
               />
@@ -437,7 +442,7 @@ const LandingPage = () => {
       {/* Start Your Growth Section */}
       <div className="px-6 py-20 text-center flex flex-col items-center gap-8">
         <div className="w-full max-w-5xl flex flex-col items-center">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px]">
             <span className="text-white">Start Your Growth with </span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
               Starflare

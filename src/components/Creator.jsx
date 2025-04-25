@@ -1,6 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 const Creator = () => {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => setIsPlaying(true);
+  const handlePause = () => setIsPlaying(false);
+
   return (
     <div className="w-full min-h-screen relative overflow-x-hidden">
       {/* Hero Section */}
@@ -9,7 +17,7 @@ const Creator = () => {
         <div className="flex-1 flex flex-col items-start text-left mx-5">
           {/* Heading */}
           <div className="text-center ">
-            <h2 className="text-xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+            <h2 className="text-xl md:text-4xl lg:text-5xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[72px]">
               <span className="text-white">
                 Unlock Your Potential with Exclusive Brand Collaborations & UGC{" "}
               </span>
@@ -46,8 +54,12 @@ const Creator = () => {
 
         {/* Right Image */}
         <div className="flex-1 flex justify-center relative">
-          <img
-            src="/phone.png"
+          <motion.img
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+            src="/Creatorpage/phone.png"
             alt="Phone App Preview"
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain relative z-10"
           />
@@ -55,16 +67,16 @@ const Creator = () => {
       </div>
 
       {/* Marquee Brand Logos */}
-      <div className="relative w-full overflow-hidden mt-52">
+      <div className="relative w-full overflow-hidden sm:mt-52 mt-25">
         <div className="w-screen overflow-hidden relative">
           <div className="flex w-max animate-[scroll-left_30s_linear_infinite] gap-6">
             <img
-              src="/Component11.png"
+              src="/Creatorpage/Component11.png"
               alt="Brand"
               className="object-contain h-8 sm:h-8 md:h-10 lg:h-10 xl:h-10"
             />
             <img
-              src="/Component11.png"
+              src="/Creatorpage/Component11.png"
               alt="Brand"
               className="object-contain h-8 sm:h-8 md:h-10 lg:h-10 xl:h-10"
             />
@@ -73,10 +85,10 @@ const Creator = () => {
       </div>
 
       {/* Why Creators love */}
-      <div className="w-full sm:px-20 md:px-10 px-5 pb-30 pt-48">
+      <div className="w-full sm:px-20 md:px-10 px-5 pb-30 sm:pt-48 pt-25">
         {/* Heading */}
         <div className="text-start mb-10">
-          <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-medium font-['Roboto'] leading-snug">
+          <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-medium font-['Roboto_Serif'] leading-snug">
             <span className="text-white mr-2"> Why Creators Love</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative  ">
               Starflare
@@ -85,63 +97,167 @@ const Creator = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:gap-4 xl:gap-6">
-            {/* Wide Image1*/}
-            <a
-              href="#"
-              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 shadow-lg sm:col-span-2 md:h-64"
+        <div className=" max-w-screen-3xl px-4 md:px-0">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:gap-4 xl:gap-4">
+            {/* Wide Image1 - First to appear */}
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-emerald-400 sm:col-span-2 sm:w-[400px] md:w-[400px] lg:w-[560px] xl:w-[670px] w-full sm:p-5 md:p-4 lg:p-5 xl:p-5 p-2"
             >
-              <img
-                src="/creator1.png"
-                loading="lazy"
-                alt="Creator 1"
-                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
-              />
-              
-            </a>
+              {/* Content Section */}
+              <div className="w-full flex flex-col">
+                {/* Heading Text (smaller) */}
+                <div className="text-white lg:text-xl md:text-lg font-medium font-['Roboto_Serif']">
+                  Exclusive Brand Collaborations
+                </div>
 
-            {/* Small Image2 */}
-            <a
-              href="#"
-              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900  md:h-64"
+                {/* Paragraph */}
+                <div className="max-w-[624px] text-white sm:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
+                  Get access to top-tier campaigns tailored to your audience and
+                  content style.
+                </div>
+
+                {/* Centered Image (larger) */}
+                <div className="w-full flex justify-center">
+                  <motion.img
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    src="/Creatorpage/group1.png"
+                    alt="Group Icon"
+                    className="h-38 sm:h-38 md:h-42 lg:h-48 xl:h-52 w-auto"
+                  />
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Small Image2 - Second to appear */}
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-pink-500 sm:w-[300px] md:w-[300px] lg:w-[378px] xl:w-[468px] w-full sm:mx-0 lg:-mx-15 md:-mx-14 xl:-mx-45 -mx-0 sm:p-5 md:p-4 lg:p-5 p-2"
             >
-              <img
-                src="/creator2.png"
-                loading="lazy"
-                alt="Creator 2"
-                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
-              />
-  
-            </a>
+              {/* Content Section */}
+              <div className="w-full flex flex-col">
+                {/* Heading */}
+                <div className="text-white lg:text-xl md:text-md text-sm font-medium font-['Roboto_Serif']">
+                  Automated Campaign Management
+                </div>
 
-            {/* Small Image3 */}
-            <a
+                {/* Paragraph */}
+                <div className="max-w-[624px] text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
+                  Receive tasks, submit content, and track earnings—all in one
+                  place.
+                </div>
+
+                {/* Large Image at the Bottom */}
+                <div className="w-full flex justify-center items-center h-full py-2">
+                  <motion.img
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    src="/Creatorpage/group2.png"
+                    alt="Group 2"
+                    className="h-30 sm:h-30 md:h-30 xl:h-40 lg:h-32 w-auto"
+                  />
+                </div>
+              </div>
+            </motion.a>
+
+            {/* Small Image3 - Third to appear */}
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               href="#"
-              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 md:h-64"
+              className="group relative flex flex-col justify-start items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-orange-500 w-full sm:w-[480px] md:w-[320px] xl:w-[570px] lg:w-[500px] sm:p-5 md:p-4 lg:p-5 p-2"
             >
-              <img
-                src="/creator3.png"
-                loading="lazy"
-                alt="Creator 3"
-                className="absolute inset-0 h-full  w-full object-fill object-center transition duration-200 group-hover:scale-110"
-              />
+              {/* Heading */}
+              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
+                Fast & Secure Payments
+              </div>
 
-            </a>
+              {/* Paragraph */}
+              <div className="text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
+                Get paid on time with our automated transaction system.
+              </div>
 
-            {/* Wide Image4 */}
-            <a
+              {/* Images Row */}
+              <div className="flex mt-2">
+                <motion.img
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  src="/Creatorpage/frame5.png"
+                  alt="Frame 5"
+                  className="h-25 sm:h-30 md:h-32 lg:h-34 xl:h-38 w-[65%] sm:w-[58%] lg:w-[64%] xl:w-[80%] md:w-[65%]"
+                />
+                <motion.img
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  src="/Creatorpage/frame6.png"
+                  alt="Frame 6"
+                  className="lg:w-auto w-24 md:w-24 h-24 md:h-32 lg:h-34 xl:h-38 lg:mt-0 xl:mt-0 md:mt-0 md:ml-2 lg:ml-5 xl:ml-3 ml-2 mt-0"
+                />
+              </div>
+            </motion.a>
+
+            {/* Wide Image4 - Last to appear */}
+            <motion.a
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
               href="#"
-              className="group relative flex h-48 lg:h-72 items-end overflow-hidden rounded-lg bg-zinc-900 sm:col-span-2 md:h-64"
+              className="group relative flex flex-col items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-purple-600 w-full sm:w-[480px] md:w-[378px] lg:w-[450px] xl:w-[560px] sm:mx-0 lg:mx-48 md:mx-25 xl:mx-40 -mx-0 sm:p-5 md:p-4 lg:p-5 p-2"
             >
-              <img
-                src="/creator4.png"
-                loading="lazy"
-                alt="Creator 4"
-                className="absolute inset-0 h-full w-full object-fill object-center transition duration-200 group-hover:scale-110"
-              />
+              {/* Heading */}
+              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
+                No More Endless Emails
+              </div>
 
-            </a>
+              {/* Paragraph */}
+              <div className="text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
+                Accept offers, complete tasks, and communicate with brands
+                directly through the app.
+              </div>
+
+              {/* Images Row */}
+              <div className="flex mt-2">
+                <motion.img
+                  initial={{ x: 20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 0.9 }}
+                  src="/Creatorpage/group3.png"
+                  alt="Frame 5"
+                  className="h-24 md:h-28 lg:h-32 lg:w-[54%] md:w-[58%] w-[50%]"
+                />
+                <motion.img
+                  initial={{ x: 20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 1.0,
+                    once: false,
+                    amount: 0.5,
+                  }}
+                  src="/Creatorpage/frame4.png"
+                  alt="Frame 6"
+                  className="lg:w-auto xl:w-52 w-32 md:w-44 h-24 md:h-24 lg:h-30 lg:mt-0 md:-mt-0 md:ml-3 lg:ml-5 ml-5 mt-0"
+                />
+              </div>
+            </motion.a>
           </div>
         </div>
       </div>
@@ -150,7 +266,7 @@ const Creator = () => {
       <div className="w-full relative flex flex-col items-center text-center gap-10 overflow-hidden pt-10 pb-30">
         {/* Top Text */}
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">Creators</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Trusted
@@ -171,12 +287,12 @@ const Creator = () => {
               <img
                 src="/brand.png"
                 alt="Brand"
-                className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40 "
+                className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40 "
               />
               <img
                 src="/brand.png"
                 alt="Brand"
-                className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40"
+                className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40"
               />
             </div>
           </div>
@@ -187,7 +303,7 @@ const Creator = () => {
       <div className="w-full relative overflow-hidden px-4 md:px-10 pt-40 pb-40">
         {/* Heading */}
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">How It</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Works
@@ -209,28 +325,52 @@ const Creator = () => {
           {/* Right Video + Ellipses */}
           <div className="relative w-full md:w-1/2 z-10 px-5 mt-10">
             {/* Ellipses */}
-            <img
-              src="/ellipse1.svg"
-              alt="Ellipse 1"
-              className="absolute sm:-top-14 sm:-left-20 md:-left-10 md:-top-10 -left-1 -top-8 w-15 h-15 md:w-20 md:h-20 lg:w-30 lg:h-30 z-20"
-            />
-            <img
-              src="/ellipse2.svg"
-              alt="Ellipse 2"
-              className="absolute sm:-top-15 sm:right-[-20px] md:-top-10 right-1 -top-7 w-12 h-12 md:w-18 md:h-18 lg:w-20 lg-h-20  z-20"
-            />
-            <img
-              src="/ellipse3.svg"
-              alt="Ellipse 3"
-              className="absolute bottom-[-20px] sm:left-12 md:left-5 left-8 w-10 h-10 md:h-15 md:w-15 lg:w-20 lg:h-20 z-20"
-            />
+            {!isPlaying && (
+              <>
+              <motion.img
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+                src="/Creatorpage/ellipse1.svg"
+                alt="Ellipse 1"
+                className="absolute sm:-top-14 sm:-left-20 md:-left-8 md:-top-8 -left-1 -top-8 w-15 h-15 md:w-20 md:h-18 lg:w-30 lg:h-30 z-20"
+              />
+              <motion.img
+                  initial={{ opacity: 0, x: 80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  src="/Creatorpage/ellipse2.svg"
+                  alt="Ellipse 2"
+                  className="absolute top-[-30px] right-[10px] w-12 h-12 md:w-18 md:h-18 lg:w-20 lg:h-20 z-20"
+
+                />
+              <motion.img
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
+                viewport={{ once: false, amount: 0.5 }}
+                src="/Creatorpage/ellipse3.svg"
+                alt="Ellipse 3"
+                className="absolute bottom-[-27px] sm:left-12 md:left-15 left-8 w-10 h-10 md:h-15 md:w-15 lg:w-20 lg:h-17 z-20"
+              />
+            </>
+            )}
 
             {/* Video */}
-            <video
-              src="/vid2.mov"
+            <motion.video
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+              ref={videoRef}
+              src="/Creatorpage/vid2.mov"
               controls
               className="w-full h-auto rounded-lg relative z-10"
-            ></video>
+              onPlay={handlePlay}
+              onPause={handlePause}
+            />
           </div>
         </div>
 
@@ -243,7 +383,7 @@ const Creator = () => {
       <div className="flex-1 flex flex-col items-center text-center mx-5">
         {/* Heading */}
         <div className="text-center ">
-          <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+          <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[72px]">
             <span className="text-white mr-2">Join the Future of</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
               Creator
