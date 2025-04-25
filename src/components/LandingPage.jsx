@@ -2,6 +2,11 @@ import React from "react";
 import { CalendarCheck2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
 const LandingPage = () => {
   const [activeCard, setActiveCard] = useState(0);
@@ -432,6 +437,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+<<<<<<< Updated upstream
 
       {/* Start Your Growth Section */}
       <div className="px-6 py-20 text-center flex flex-col items-center gap-8">
@@ -457,6 +463,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+=======
+>>>>>>> Stashed changes
     </div>
   );
 };
