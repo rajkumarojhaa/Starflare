@@ -17,7 +17,7 @@ const Creator = () => {
         <div className="flex-1 flex flex-col items-start text-left mx-5">
           {/* Heading */}
           <div className="text-center ">
-            <h2 className="text-xl md:text-4xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+            <h2 className="text-xl md:text-4xl lg:text-5xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[72px]">
               <span className="text-white">
                 Unlock Your Potential with Exclusive Brand Collaborations & UGC{" "}
               </span>
@@ -67,7 +67,7 @@ const Creator = () => {
       </div>
 
       {/* Marquee Brand Logos */}
-      <div className="relative w-full overflow-hidden mt-52">
+      <div className="relative w-full overflow-hidden sm:mt-52 mt-25">
         <div className="w-screen overflow-hidden relative">
           <div className="flex w-max animate-[scroll-left_30s_linear_infinite] gap-6">
             <img
@@ -85,10 +85,10 @@ const Creator = () => {
       </div>
 
       {/* Why Creators love */}
-      <div className="w-full sm:px-20 md:px-10 px-5 pb-30 pt-48">
+      <div className="w-full sm:px-20 md:px-10 px-5 pb-30 sm:pt-48 pt-25">
         {/* Heading */}
         <div className="text-start mb-10">
-          <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-medium font-['Roboto'] leading-snug">
+          <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-medium font-['Roboto_Serif'] leading-snug">
             <span className="text-white mr-2"> Why Creators Love</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative  ">
               Starflare
@@ -110,12 +110,12 @@ const Creator = () => {
               {/* Content Section */}
               <div className="w-full flex flex-col">
                 {/* Heading Text (smaller) */}
-                <div className="text-white lg:text-xl md:text-lg font-medium font-['Roboto']">
+                <div className="text-white lg:text-xl md:text-lg font-medium font-['Roboto_Serif']">
                   Exclusive Brand Collaborations
                 </div>
 
                 {/* Paragraph */}
-                <div className="max-w-[624px] text-white sm:text-base text-xs font-normal font-['Roboto'] sm:leading-6 md:leading-4 leading-3">
+                <div className="max-w-[624px] text-white sm:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
                   Get access to top-tier campaigns tailored to your audience and
                   content style.
                 </div>
@@ -146,12 +146,12 @@ const Creator = () => {
               {/* Content Section */}
               <div className="w-full flex flex-col">
                 {/* Heading */}
-                <div className="text-white lg:text-xl md:text-md text-sm font-medium font-['Roboto']">
+                <div className="text-white lg:text-xl md:text-md text-sm font-medium font-['Roboto_Serif']">
                   Automated Campaign Management
                 </div>
 
                 {/* Paragraph */}
-                <div className="max-w-[624px] text-white lg:text-base md:text-sm text-xs font-normal font-['Roboto'] sm:leading-6 md:leading-4 leading-3">
+                <div className="max-w-[624px] text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
                   Receive tasks, submit content, and track earnings—all in one
                   place.
                 </div>
@@ -181,12 +181,12 @@ const Creator = () => {
               className="group relative flex flex-col justify-start items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-orange-500 w-full sm:w-[480px] md:w-[320px] xl:w-[570px] lg:w-[500px] sm:p-5 md:p-4 lg:p-5 p-2"
             >
               {/* Heading */}
-              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto']">
+              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
                 Fast & Secure Payments
               </div>
 
               {/* Paragraph */}
-              <div className="text-white lg:text-base md:text-sm text-xs font-normal font-['Roboto'] sm:leading-6 md:leading-4 leading-3 pb-2">
+              <div className="text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
                 Get paid on time with our automated transaction system.
               </div>
 
@@ -223,12 +223,12 @@ const Creator = () => {
               className="group relative flex flex-col items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-purple-600 w-full sm:w-[480px] md:w-[378px] lg:w-[450px] xl:w-[560px] sm:mx-0 lg:mx-48 md:mx-25 xl:mx-40 -mx-0 sm:p-5 md:p-4 lg:p-5 p-2"
             >
               {/* Heading */}
-              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto']">
+              <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
                 No More Endless Emails
               </div>
 
               {/* Paragraph */}
-              <div className="text-white lg:text-base md:text-sm text-xs font-normal font-['Roboto'] sm:leading-6 md:leading-4 leading-3 pb-2">
+              <div className="text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
                 Accept offers, complete tasks, and communicate with brands
                 directly through the app.
               </div>
@@ -266,7 +266,7 @@ const Creator = () => {
       <div className="w-full relative flex flex-col items-center text-center gap-10 overflow-hidden pt-10 pb-30">
         {/* Top Text */}
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">Creators</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Trusted
@@ -287,12 +287,12 @@ const Creator = () => {
               <img
                 src="/brand.png"
                 alt="Brand"
-                className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40 "
+                className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40 "
               />
               <img
                 src="/brand.png"
                 alt="Brand"
-                className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40"
+                className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40"
               />
             </div>
           </div>
@@ -303,7 +303,7 @@ const Creator = () => {
       <div className="w-full relative overflow-hidden px-4 md:px-10 pt-40 pb-40">
         {/* Heading */}
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">How It</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Works
@@ -334,7 +334,7 @@ const Creator = () => {
                 viewport={{ once: false, amount: 0.5 }}
                 src="/Creatorpage/ellipse1.svg"
                 alt="Ellipse 1"
-                className="absolute sm:-top-14 sm:-left-20 md:-left-10 md:-top-10 -left-1 -top-8 w-15 h-15 md:w-20 md:h-20 lg:w-30 lg:h-30 z-20"
+                className="absolute sm:-top-14 sm:-left-20 md:-left-8 md:-top-8 -left-1 -top-8 w-15 h-15 md:w-20 md:h-18 lg:w-30 lg:h-30 z-20"
               />
               <motion.img
                   initial={{ opacity: 0, x: 80 }}
@@ -353,7 +353,7 @@ const Creator = () => {
                 viewport={{ once: false, amount: 0.5 }}
                 src="/Creatorpage/ellipse3.svg"
                 alt="Ellipse 3"
-                className="absolute bottom-[-20px] sm:left-12 md:left-5 left-8 w-10 h-10 md:h-15 md:w-15 lg:w-20 lg:h-20 z-20"
+                className="absolute bottom-[-27px] sm:left-12 md:left-15 left-8 w-10 h-10 md:h-15 md:w-15 lg:w-20 lg:h-17 z-20"
               />
             </>
             )}
@@ -383,7 +383,7 @@ const Creator = () => {
       <div className="flex-1 flex flex-col items-center text-center mx-5">
         {/* Heading */}
         <div className="text-center ">
-          <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto'] leading-tight md:leading-[72px]">
+          <h2 className="text-xl md:text-3xl lg:text-5xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[72px]">
             <span className="text-white mr-2">Join the Future of</span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative mr-2">
               Creator

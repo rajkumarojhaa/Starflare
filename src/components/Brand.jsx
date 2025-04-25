@@ -39,7 +39,7 @@ const Brand = () => {
   };
 
   return (
-    <div className="w-full min-h-screen relative overflow-x-hidden">
+    <div className="w-full min-h-screen relative overflow-x-hidden ">
       {/* Hero Section */}
 
       <section className="relative  pt-45 text-center flex flex-col items-center gap-0 overflow-hidden">
@@ -56,7 +56,7 @@ const Brand = () => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h2 className="text-xl md:text-4xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px] sm:mx-20 md:mx-5 text-white">
+          <h2 className="text-xl md:text-4xl lg:text-6xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px] sm:mx-20 md:mx-5 text-white">
             Power Your Brand with
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative ml-3">
               AI-Driven
@@ -67,7 +67,7 @@ const Brand = () => {
 
         {/* Animated Paragraph */}
         <motion.div
-          className="text-gray-300 sm:text-lg text-sm  mb-3 max-w-2xl mx-auto z-10"
+          className="text-gray-100 font-['Roboto_Serif'] sm:text-lg text-sm foont-normal  mb-3 max-w-3xl mx-auto z-10"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -100,7 +100,7 @@ const Brand = () => {
 
         {/* Animated Trusted Section */}
         <motion.div
-          className="w-full flex flex-col items-center text-center gap-10 overflow-hidden pt-56"
+          className="w-full flex flex-col items-center text-center gap-10 overflow-hidden sm:pt-56 pt-24"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -108,7 +108,7 @@ const Brand = () => {
         >
           <div className="w-full flex flex-col items-center text-center">
             <motion.h2
-              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto']"
+              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight md:leading-[96px] font-['Roboto_Serif']"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -138,18 +138,18 @@ const Brand = () => {
           </div>
 
           {/* Marquee Brand Logos */}
-          <div className="relative w-full overflow-hidden mt-10">
+          <div className="relative w-full overflow-hidden sm:mt-10  pb-12">
             <div className="w-screen overflow-hidden relative">
               <div className="flex w-max animate-[scroll-left_30s_linear_infinite]">
                 <img
                   src="/brand.png"
                   alt="Brand"
-                  className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40"
+                  className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40"
                 />
                 <img
                   src="/brand.png"
                   alt="Brand"
-                  className="object-contain h-24 sm:h-20 md:h-36 lg:h-36 xl:h-40"
+                  className="object-contain h-20 sm:h-20 md:h-36 lg:h-36 xl:h-40"
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ const Brand = () => {
       <section className="w-full xl:pt-30 lg:pt-20 md:pt-15 sm:pt-10 pt-5 pb-30 p-5 flex flex-col md:flex-row items-center justify-between gap-0 max-w-7xl mx-auto">
         {/* Left - Text Section */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center">
-          <h2 className="text-2xl md:text-4xl lg:text-4xl font-medium font-['Roboto'] leading-tight md:leading-[96px]">
+          <h2 className="text-2xl md:text-4xl lg:text-4xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px]">
             <span className="text-white">Why Brands Choose </span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
               Starflare
@@ -247,7 +247,7 @@ const Brand = () => {
       <section className="w-full px-4 sm:px-6 py-12 sm:py-20 md:py-24 max-w-7xl mx-auto flex flex-col items-center text-center gap-10">
         {/* Top Text */}
         <div className="w-full flex flex-col items-center text-center px-2">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-snug md:leading-[96px] font-['Roboto']">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-snug md:leading-[96px] font-['Roboto_Serif']">
             <span className="text-white">Seamless Collaboration with </span>
             <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative sm:pr-5 p-1">
               Creators
@@ -261,7 +261,7 @@ const Brand = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
+        <div className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center font-['Roboto_Serif']">
           {/* Left Cards */}
           <div className="flex flex-col gap-4 sm:gap-5 md:gap-6">
             {cards.map((card, index) => (
@@ -328,7 +328,7 @@ const Brand = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-6xl font-medium font-['Roboto'] leading-tight md:leading-[96px]"
+            className="text-3xl md:text-4xl lg:text-6xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ staggerChildren: 0.3 }}
