@@ -2,11 +2,8 @@ import React from "react";
 import { CalendarCheck2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
 
 const LandingPage = () => {
   const [activeCard, setActiveCard] = useState(0);
@@ -437,34 +434,6 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-<<<<<<< Updated upstream
-
-      {/* Start Your Growth Section */}
-      <div className="px-6 py-20 text-center flex flex-col items-center gap-8">
-        <div className="w-full max-w-5xl flex flex-col items-center">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium font-['Roboto_Serif'] leading-tight md:leading-[96px]">
-            <span className="text-white">Start Your Growth with </span>
-            <span className="bg-gradient-to-r from-pink-400 to-cyan-600 bg-clip-text text-transparent inline-block relative">
-              Starflare
-              <img
-                src="/Vector.svg"
-                alt="Decorative Vector"
-                className="mx-auto sm:-mt-4 mt-0 w-28 sm:w-36 md:w-40 lg:w-48"
-              />
-            </span>
-          </h2>
-        </div>
-
-        {/* Book Demo Button Styled with Icon */}
-        <div className="relative group inline-flex rounded-4xl p-[3px] transition-all duration-200 bg-transparent hover:bg-gradient-to-r hover:from-pink-400 hover:to-cyan-600">
-          <div className="px-6 py-4 bg-white/10 rounded-3xl flex items-center gap-3 w-full h-full group-hover:bg-zinc-900 transition-all duration-200">
-            <img src="/contacts.svg" alt="Contact Icon" className="w-5 h-5" />
-            <div className="text-white text-sm font-medium">Book Demo</div>
-          </div>
-        </div>
-      </div>
-=======
->>>>>>> Stashed changes
     </div>
   );
 };
