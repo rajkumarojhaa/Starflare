@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const Blog = () => {
@@ -126,6 +125,7 @@ const Blog = () => {
     </div>
   </div>
 </section>
+
 
 
       {/* cards section  */}
