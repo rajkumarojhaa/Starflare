@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const tags = [
@@ -18,64 +19,62 @@ const Blog = () => {
 
   const cards = [
     {
-      title:
-        "Navigating the Evolving Landscape of Influencer Marketing in 2024",
+      title: "The Best Influencer Marketing and UGC Creators Platforms in 2024",
       tag: "Content Create",
       time: "5 MIN READ",
-      image: "/Blogpage/Card1.png",
-      link: "/blog/blog1",
+      image: "/Blogs/Blog1/1.png",
+      link: "/Blog1",
     },
     {
-      title:
-        "Effective Strategies for Leveraging Influencers in Your Marketing Campaign",
+      title: "Why Influencer Marketing is important in 2024",
       tag: "Content Create",
       time: "5 MIN READ",
-      image: "/Blogpage/Card2.png",
-      link: "/blog/blog2",
+      image: "/Blogpage/Blog2.png",
+      link: "/Blog2",
     },
     {
-      title: "Emerging Trends in Influencer Marketing for 2024",
+      title: "The Importance of Authenticity in Influencer Marketing",
       tag: "AI",
       time: "5 MIN READ",
-      image: "/Blogpage/Card3.png",
-      link: "/blog/blog3",
+      image: "/Blogs/Blog3/banner.png",
+      link: "/Blog3",
     },
     {
-      title: "Creating a Successful Collaboration with Influencers",
+      title: "The Future of Influencer Marketing",
       tag: "Content Create",
       time: "5 MIN READ",
-      image: "/Blogpage/Card4.png",
-      link: "/blog/blog4",
+      image: "/Blogs/Blog4/banner.png",
+      link: "/Blog4",
     },
     {
-      title: "Creating a Successful Collaboration with Influencers",
+      title: "Simplifying Payments in Influencer Marketing with Starflare",
       tag: "Content Create",
       time: "5 MIN READ",
-      image: "/Blogpage/Card4.png",
-      link: "/blog/blog5",
+      image: "/Blogs/Blog5/1.jpg",
+      link: "/Blog5",
+    },
+    {
+      title: "Revolutionizing Marketing: Artificial Intelligence and Starflare",
+      tag: "Content Create",
+      time: "5 MIN READ",
+      image: "/Blogs/Blog6/1.png",
+      link: "/Blog6",
     },
     {
       title:
         "Navigating the Evolving Landscape of Influencer Marketing in 2024",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogpage/Card2.png",
-      link: "/blog/blog6",
-    },
-    {
-      title: "Emerging Trends in Influencer Marketing for 2024",
       tag: "AI",
       time: "5 MIN READ",
-      image: "/Blogpage/Card3.png",
-      link: "/blog/blog7",
+      image: "/Blogpage/Card1.png",
+      link: "/Blog7",
     },
     {
       title:
-        "Effective Strategies for Leveraging Influencers in Your Marketing Campaign",
+        "Influencer Marketing with AI: Revolutionizing the Digital Landscape",
       tag: "Content Create",
       time: "5 MIN READ",
-      image: "/Blogpage/Card1.png",
-      link: "/blog/blog7",
+      image: "/Blogs/Blog8/1.png",
+      link: "/Blog8",
     },
   ];
 
@@ -94,7 +93,7 @@ const Blog = () => {
 
   return (
     <>
-      <section className="w-full bg-[#181818] text-white py-16 ">
+      <section className="w-full bg-[#181818] text-white py-16">
         <div className="w-full max-w-full mx-auto flex flex-col lg:flex-row justify-between gap-12 lg:min-h-[300px] py-16">
           {/* Left Images */}
           <div className="hidden lg:flex lg:flex-col gap-4 justify-start">
@@ -146,12 +145,12 @@ const Blog = () => {
                   <span className="text-zinc-400 font-medium">{card.time}</span>
                 </div>
                 <h3 className="text-base font-semibold mb-2">{card.title}</h3>
-                <a
-                  href={card.link}
+                <Link
+                  to={card.link}
                   className="text-blue-400 hover:underline text-sm font-medium"
                 >
                   Read more
-                </a>
+                </Link>
               </div>
             </div>
           ))}
