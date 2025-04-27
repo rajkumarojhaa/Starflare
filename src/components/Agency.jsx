@@ -136,72 +136,71 @@ const Agency = () => {
       </div>
 
       {/* Image Section */}
-      <div className="relative w-full flex justify-center px-5 pt-10 pb-20 sm:pb-36">
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Left Ball */}
-          <div
-            className="absolute left-[3%] top-1/2 transform -translate-y-1/2 
+      <div className="relative w-full flex justify-center items-center px-5 pt-10 pb-20 sm:pb-36">
+  {/* Background Balls */}
+  <div className="absolute inset-0 pointer-events-none">
+    {/* Left Ball */}
+    <div
+      className="absolute left-[3%] top-1/2 transform -translate-y-1/2 
       w-[80%] sm:w-[50%] h-52 sm:h-96 
       bg-pink-400 rounded-full 
       blur-[120px] sm:blur-[200px] opacity-70"
-          />
+    />
 
-          {/* Right Ball */}
-          <div
-            className="absolute right-[1%] top-1/2 transform -translate-y-1/2 
+    {/* Right Ball */}
+    <div
+      className="absolute right-[1%] top-1/2 transform -translate-y-1/2 
       w-[80%] sm:w-[50%] h-52 sm:h-96 
       bg-cyan-600 rounded-full 
       blur-[120px] sm:blur-[200px] opacity-70"
-          />
-        </div>
+    />
+  </div>
 
-        {/* Main Image */}
-        <div
-          className="relative lg:w-[741px] lg:h-[550px] md:w-[450px] w-[220px] h-[150px]"
-          ref={containerRef}
-        >
-          {/* Main Image */}
-          <motion.img
-            src="/Agencypage/big1.png"
-            alt="Main"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-            className="w-full h-full object-contain rounded-xl"
-          />
+  {/* Main Images */}
+  <div className="relative" ref={containerRef}>
+    {/* Main Image */}
+    <motion.img
+      src="/Agencypage/big1.png"
+      alt="Main"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="w-[220px] h-[150px] sm:w-[450px] sm:h-[350px] lg:w-[741px] lg:h-[550px] object-contain rounded-xl mx-auto "
+    />
 
-          {/* Top-right small image */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-            className="absolute lg:top-10 lg:-right-48  md:-right-24 md:-top-28 -top-8 -right-18 lg:w-72 sm:h-60 md:w-50 md:h-50  w-25 h-24"
-          >
-            <img
-              src="/Agencypage/Group 1145.png"
-              alt="Top Right"
-              className="w-full h-full object-fill"
-            />
-          </motion.div>
+    {/* Top-right small image */}
+    <motion.div
+      initial={{ opacity: 0, x: 50, y: -50 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="absolute top-0 right-0 translate-x-1/2 sm:translate-y-1 -translate-y-8"
+    >
+      <img
+        src="/Agencypage/Group 1145.png"
+        alt="Top Right"
+        className="w-28 h-28 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 object-contain"
+      />
+    </motion.div>
 
-          {/* Bottom-left small image */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.8 }}
-            className="absolute lg:-bottom-1 lg:-left-40 -bottom-5 -left-16 lg:w-72 lg:h-60 md:w-50 md:h-45 md:-bottom-24 md:-left-18 w-25 h-24"
-          >
-            <img
-              src="/Agencypage/Group 238355.png"
-              alt="Bottom Left"
-              className="w-full h-full object-fill"
-            />
-          </motion.div>
-        </div>
-      </div>
+    {/* Bottom-left small image */}
+    <motion.div
+      initial={{ opacity: 0, x: -50, y: 50 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="absolute bottom-0 left-0 sm:-translate-x-1/2 -translate-x-16 sm:translate-y-0 translate-y-5"
+    >
+      <img
+        src="/Agencypage/Group 238355.png"
+        alt="Bottom Left"
+        className="w-28 h-28 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 object-contain"
+      />
+    </motion.div>
+  </div>
+</div>
+
 
       {/* Why Agencies Choose Starflare */}
       <div className="w-full flex flex-col items-center justify-center pt-10 px-5">
