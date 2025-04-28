@@ -136,72 +136,71 @@ const Agency = () => {
       </div>
 
       {/* Image Section */}
-      <div className="relative w-full flex justify-center px-5 pt-10 pb-20 sm:pb-36">
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Left Ball */}
-          <div
-            className="absolute left-[3%] top-1/2 transform -translate-y-1/2 
+      <div className="relative w-full flex justify-center items-center px-5 pt-10 pb-20 sm:pb-36">
+  {/* Background Balls */}
+  <div className="absolute inset-0 pointer-events-none">
+    {/* Left Ball */}
+    <div
+      className="absolute left-[3%] top-1/2 transform -translate-y-1/2 
       w-[80%] sm:w-[50%] h-52 sm:h-96 
       bg-pink-400 rounded-full 
       blur-[120px] sm:blur-[200px] opacity-70"
-          />
+    />
 
-          {/* Right Ball */}
-          <div
-            className="absolute right-[1%] top-1/2 transform -translate-y-1/2 
+    {/* Right Ball */}
+    <div
+      className="absolute right-[1%] top-1/2 transform -translate-y-1/2 
       w-[80%] sm:w-[50%] h-52 sm:h-96 
       bg-cyan-600 rounded-full 
       blur-[120px] sm:blur-[200px] opacity-70"
-          />
-        </div>
+    />
+  </div>
 
-        {/* Main Image */}
-        <div
-          className="relative lg:w-[741.48px] lg:h-[550.79px] md:w-[450px] w-[220px] h-[150px]"
-          ref={containerRef}
-        >
-          {/* Main Image */}
-          <motion.img
-            src="/Agencypage/big1.png"
-            alt="Main"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-            className="w-full h-full object-contain rounded-xl"
-          />
+  {/* Main Images */}
+  <div className="relative" ref={containerRef}>
+    {/* Main Image */}
+    <motion.img
+      src="/Agencypage/big1.png"
+      alt="Main"
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="w-[220px] h-[150px] sm:w-[450px] sm:h-[350px] lg:w-[741px] lg:h-[550px] object-contain rounded-xl mx-auto "
+    />
 
-          {/* Top-right small image */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }}
-            className="absolute lg:top-10 lg:-right-48 md:-right-24 md:-top-28 -top-8 -right-18 lg:w-72 sm:h-60 md:w-50 md:h-50  w-25 h-24"
-          >
-            <img
-              src="/Agencypage/Group 1145.png"
-              alt="Top Right"
-              className="w-full h-full object-fill"
-            />
-          </motion.div>
+    {/* Top-right small image */}
+    <motion.div
+      initial={{ opacity: 0, x: 50, y: -50 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="absolute top-0 right-0 translate-x-1/2 sm:translate-y-1 -translate-y-8"
+    >
+      <img
+        src="/Agencypage/Group 1145.png"
+        alt="Top Right"
+        className="w-28 h-28 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 object-contain"
+      />
+    </motion.div>
 
-          {/* Bottom-left small image */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.8 }}
-            className="absolute lg:-bottom-1 lg:-left-40 -bottom-5 -left-16 lg:w-72 lg:h-60 md:w-50 md:h-45 md:-bottom-24 md:-left-18 w-25 h-24"
-          >
-            <img
-              src="/Agencypage/Group 238355.png"
-              alt="Bottom Left"
-              className="w-full h-full object-fill"
-            />
-          </motion.div>
-        </div>
-      </div>
+    {/* Bottom-left small image */}
+    <motion.div
+      initial={{ opacity: 0, x: -50, y: 50 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className="absolute bottom-0 left-0 sm:-translate-x-1/2 -translate-x-16 sm:translate-y-0 translate-y-5"
+    >
+      <img
+        src="/Agencypage/Group 238355.png"
+        alt="Bottom Left"
+        className="w-28 h-28 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 object-contain"
+      />
+    </motion.div>
+  </div>
+</div>
+
 
       {/* Why Agencies Choose Starflare */}
       <div className="w-full flex flex-col items-center justify-center pt-10 px-5">
@@ -326,7 +325,7 @@ const Agency = () => {
           {/* Content Grid */}
           <div className="relative w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
             {/* Left Cards */}
-            <div className="flex flex-col w-full md:w-xs lg:w-full gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+            <div className="flex flex-col w-full gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-xl">
               {cards.map((card, index) => (
                 <div
                   key={index}
@@ -360,21 +359,22 @@ const Agency = () => {
               </div>
 
               {activeCard === 0 ? (
-                <div className="relative w-full min-h-[250px] sm:min-h-[500px] md:min-h-[500px] lg:min-h-[500px] flex items-center justify-center">
+                <div className="relative w-full min-h-[250px] sm:min-h-[500px] flex items-center justify-center">
                   {/* Base Image */}
                   <motion.img
                     src={images[0]}
                     alt="Image 1"
-                    className="absolute w-44 sm:w-60 md:w-52 lg:w-56 xl:w-xs object-contain z-10 left-2 sm:left-0 md:-left-10 lg:left-0 bottom-0 sm:bottom-20 md:bottom-30 lg:bottom-20"
+                    className="absolute w-40 sm:w-52 md:w-52 lg:w-60 xl:w-72 object-contain z-10  transform -translate-x-20 sm:translate-x-1/2 md:-translate-x-20 lg:-translate-x-32 xl:-translate-x-36 translate-y-15 sm:-translate-y-1/2 md:translate-y-24 lg:translate-y-32 xl:translate-y-32"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", stiffness: 90, damping: 30 }}
                   />
+
                   {/* Middle Image */}
                   <motion.img
                     src={images[1]}
                     alt="Image 2"
-                    className="absolute w-62 sm:w-52 md:w-72 lg:w-sm xl:w-lg object-contain z-20 top-24 sm:top-32 md:top-52 lg:top-50 xl:top-32 left-20 sm:left-28 md:left-10 lg:left-15 xl:left-28"
+                    className="absolute w-60 sm:w-56 md:w-72 lg:w-96 xl:w-96 object-contain z-20  transform translate-x-4 sm:translate-x-1/2 md:translate-x-8 lg:translate-x-10 xl:translate-x-5 translate-y-3 sm:-translate-y-1/2 md:translate-y-11 lg:translate-y-12 xl:translate-y-14"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
@@ -384,25 +384,12 @@ const Agency = () => {
                       delay: 0.1,
                     }}
                   />
+
                   {/* Add Campaign */}
                   <motion.img
                     src={images[2]}
                     alt="Image 4"
-                    className="absolute w-25 sm:w-52 md:w-28 lg:w-38 object-contain z-20 top-22 sm:top-30 md:top-50 lg:top-44 xl:top-30 left-8 sm:left-8 lg:left-6 xl:left-8 md:left-0"
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 90,
-                      damping: 30,
-                      delay: 0.1,
-                    }}
-                  />
-                  {/* Top-right Image */}
-                  <motion.img
-                    src={images[3]}
-                    alt="Image 3"
-                    className="absolute w-32 sm:w-44 md:w-48 object-contain z-30 top-8 sm:top-10 md:top-22 lg:top-25 xl:top-10 right-0"
+                    className="absolute w-24 sm:w-28 md:w-28 lg:w-36 object-contain z-20  transform -translate-x-24 sm:-translate-x-1/2 md:-translate-x-24 lg:-translate-x-36 xl:-translate-x-36 -translate-y-12 sm:-translate-y-1/2 md:-translate-y-8 lg:-translate-y-12 xl:-translate-y-10"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
@@ -412,14 +399,29 @@ const Agency = () => {
                       delay: 0.2,
                     }}
                   />
+
+                  {/* Top-right Image */}
+                  <motion.img
+                    src={images[3]}
+                    alt="Image 3"
+                    className="absolute w-32 sm:w-32 md:w-44 lg:w-48 object-contain z-30  transform translate-x-22 sm:translate-x-1/4 md:translate-x-22 lg:translate-x-32 xl:translate-x-32 -translate-y-15 sm:translate-y-1/4 md:-translate-y-14 lg:-translate-y-20 xl:-translate-y-15"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 90,
+                      damping: 30,
+                      delay: 0.3,
+                    }}
+                  />
                 </div>
               ) : activeCard === 1 ? (
-                <div className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[400px] lg:min-h-[400px] flex items-center justify-center">
+                <div className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[400px] lg:min-h-[400px] flex items-center justify-center overflow-hidden">
                   {/* Base Image */}
                   <motion.img
                     src={images[4]}
                     alt="Main Image"
-                    className="absolute left-1 sm:left-0 md:-left-10 lg:-left-2 xl:left-0 w-58 sm:w-40 md:w-64 lg:w-xs xl:w-md object-contain z-10"
+                    className="w-56 sm:w-56 md:w-52 lg:w-72 xl:w-96 object-contain z-10 -translate-x-10 sm:-translate-x-8 md:-translate-x-14 lg:-translate-x-20 xl:-translate-x-20"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50, scale: 0.95 }}
@@ -436,7 +438,7 @@ const Agency = () => {
                   <motion.img
                     src={images[5]}
                     alt="Overlay"
-                    className="absolute w-28 sm:w-30 md:w-32 lg:w-42 xl:w-48 object-contain z-20 top-3 sm:-top-10 md:top-20 lg:top-8 xl:-top-10 -right-2 sm:-right-15 md:-right-2 lg:-right-4 xl:-right-15"
+                    className="absolute w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 object-contain z-20 translate-x-32 -translate-y-16 sm:translate-x-14 sm:-translate-y-10 md:translate-x-28 md:-translate-y-14 lg:translate-x-36 lg:-translate-y-20 xl:translate-x-52 xl:-translate-y-28"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50, scale: 0.95 }}
@@ -450,21 +452,22 @@ const Agency = () => {
                   />
                 </div>
               ) : activeCard === 2 ? (
-                <div className="relative w-full min-h-[250px] sm:min-h-[400px] flex items-center justify-center">
+                <div className="relative w-full min-h-[250px] sm:min-h-[400px] flex items-center justify-center overflow-hidden">
                   {/* Base Image */}
                   <motion.img
                     src={images[6]}
                     alt="Main Image"
-                    className=" absolute xl:w-96 md:w-72 w-50 sm:w-50 object-contain z-10 xl:right-38 lg:right-52  md:right-25 sm:right-36 right-32  "
+                    className="absolute w-52 sm:w-56 md:w-64 lg:w-80 xl:w-80 object-contain z-10 -translate-x-10 sm:translate-x-12 md:-translate-x-10 lg:-translate-x-8 xl:-translate-x-10"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ type: "spring", stiffness: 90, damping: 30 }}
                   />
+
                   {/* Overlay Image */}
                   <motion.img
                     src={images[7]}
                     alt="Overlay"
-                    className="absolute w-72 sm:w-72 md:w-80 lg:w-96 xl:w-lg object-contain z-20 top-15 sm:-top-10 md:top-36 lg:top-30 xl:top-20 -right-2 sm:-right-15 md:-right-2 lg:-right-1 xl:-right-15"
+                    className="absolute w-56 sm:w-64 md:w-64 lg:w-80 xl:w-96 object-contain z-20 translate-y-8 sm:-translate-y-10 md:translate-y-8 lg:translate-y-12 xl:translate-y-12 translate-x-10 sm:translate-x-14 md:translate-x-10 lg:translate-x-20 xl:translate-x-28"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{

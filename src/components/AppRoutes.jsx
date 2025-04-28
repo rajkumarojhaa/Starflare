@@ -31,7 +31,7 @@ const AppRoutes = () => {
         <Route path="/Blog5" element={<Blog5 />} />
         <Route path="/Blog6" element={<Blog6 />} />
         <Route path="/Blog7" element={<Blog7 />} />
-        <Route path="/Blog8" element={<Blog8 />} />
+        <Route path="/Blog8" element={<Blog8 />} />        
       </Route>
     </Routes>
   );

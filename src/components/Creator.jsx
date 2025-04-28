@@ -97,15 +97,15 @@ const Creator = () => {
         </div>
 
         {/* Image Grid */}
-        <div className=" max-w-screen-3xl px-4 md:px-0">
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:gap-4 xl:gap-4">
+        <div className=" max-w-screen-3xl px-4 md:px-0 mx-auto">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {/* Wide Image1 - First to appear */}
             <motion.a
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-emerald-400 sm:col-span-2 sm:w-[400px] md:w-[400px] lg:w-[560px] xl:w-[670px] w-full sm:p-5 md:p-4 lg:p-5 xl:p-5 p-2"
+              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-emerald-400 sm:col-span-2 p-3"
             >
               {/* Content Section */}
               <div className="w-full flex flex-col">
@@ -121,7 +121,7 @@ const Creator = () => {
                 </div>
 
                 {/* Centered Image (larger) */}
-                <div className="w-full flex justify-center">
+                <div className="w-full flex justify-center items-center">
                   <motion.img
                     initial={{ opacity: 0, x: 100 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -129,7 +129,7 @@ const Creator = () => {
                     viewport={{ once: false, amount: 0.5 }}
                     src="/Creatorpage/group1.png"
                     alt="Group Icon"
-                    className="h-38 sm:h-38 md:h-42 lg:h-48 xl:h-52 w-auto"
+                    className="h-32 sm:h-38 md:h-42 lg:h-48 xl:h-56 w-auto"
                   />
                 </div>
               </div>
@@ -141,7 +141,7 @@ const Creator = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
-              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-pink-500 sm:w-[300px] md:w-[300px] lg:w-[378px] xl:w-[468px] w-full sm:mx-0 lg:-mx-15 md:-mx-14 xl:-mx-45 -mx-0 sm:p-5 md:p-4 lg:p-5 p-2"
+              className="group relative flex h-48 lg:h-64 md:h-58 items-start overflow-hidden rounded-lg bg-pink-500 w-full p-3"
             >
               {/* Content Section */}
               <div className="w-full flex flex-col">
@@ -151,7 +151,7 @@ const Creator = () => {
                 </div>
 
                 {/* Paragraph */}
-                <div className="max-w-[624px] text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
+                <div className="max-w-[624px] text-white lg:text-sm md:text-xs text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3">
                   Receive tasks, submit content, and track earnings—all in one
                   place.
                 </div>
@@ -165,7 +165,7 @@ const Creator = () => {
                     viewport={{ once: false, amount: 0.5 }}
                     src="/Creatorpage/group2.png"
                     alt="Group 2"
-                    className="h-30 sm:h-30 md:h-30 xl:h-40 lg:h-32 w-auto"
+                    className="h-28 sm:h-30 md:h-28 xl:h-40 lg:h-32 w-auto"
                   />
                 </div>
               </div>
@@ -178,7 +178,7 @@ const Creator = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
               href="#"
-              className="group relative flex flex-col justify-start items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-orange-500 w-full sm:w-[480px] md:w-[320px] xl:w-[570px] lg:w-[500px] sm:p-5 md:p-4 lg:p-5 p-2"
+              className="group relative flex flex-col justify-start items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-orange-500 w-full p-3"
             >
               {/* Heading */}
               <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
@@ -186,12 +186,12 @@ const Creator = () => {
               </div>
 
               {/* Paragraph */}
-              <div className="text-white lg:text-sm md:text-sm text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
+              <div className="text-white lg:text-sm md:text-xs text-xs font-normal font-['Roboto_Serif'] sm:leading-6 md:leading-4 leading-3 pb-2">
                 Get paid on time with our automated transaction system.
               </div>
 
               {/* Images Row */}
-              <div className="flex mt-2">
+              <div className="w-full flex justify-center items-center h-full py-2">
                 <motion.img
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -199,16 +199,16 @@ const Creator = () => {
                   viewport={{ once: false, amount: 0.5 }}
                   src="/Creatorpage/frame5.png"
                   alt="Frame 5"
-                  className="h-25 sm:h-30 md:h-32 lg:h-34 xl:h-38 w-[65%] sm:w-[58%] lg:w-[64%] xl:w-[80%] md:w-[65%]"
+                  className="h-25 sm:h-30 md:h-20 lg:h-34 xl:h-32 w-[65%] sm:w-[58%] lg:w-[64%] xl:w-[60%] md:w-[60%]"
                 />
                 <motion.img
-                  initial={{ opacity: 0, x: 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                  viewport={{ once: false, amount: 0.5 }}
+                  // initial={{ opacity: 0, x: 100 }}
+                  // whileInView={{ opacity: 1, x: 0 }}
+                  // transition={{ duration: 0.8, ease: "easeInOut" }}
+                  // viewport={{ once: false, amount: 0.5 }}
                   src="/Creatorpage/frame6.png"
                   alt="Frame 6"
-                  className="lg:w-auto w-24 md:w-24 h-24 md:h-32 lg:h-34 xl:h-38 lg:mt-0 xl:mt-0 md:mt-0 md:ml-2 lg:ml-5 xl:ml-3 ml-2 mt-0"
+                  className="lg:w-24 w-24 md:w-18 h-24 md:h-20 lg:h-34 xl:h-32 lg:mt-0 xl:mt-0 md:mt-0 md:ml-2 lg:ml-1 xl:ml-3 ml-2 mt-0"
                 />
               </div>
             </motion.a>
@@ -220,7 +220,7 @@ const Creator = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
               href="#"
-              className="group relative flex flex-col items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-purple-600 w-full sm:w-[480px] md:w-[378px] lg:w-[450px] xl:w-[560px] sm:mx-0 lg:mx-48 md:mx-25 xl:mx-40 -mx-0 sm:p-5 md:p-4 lg:p-5 p-2"
+              className="group relative flex flex-col items-start h-48 lg:h-64 md:h-58 overflow-hidden rounded-lg bg-purple-600 w-full sm:col-span-2 p-3"
             >
               {/* Heading */}
               <div className="text-white lg:text-xl md:text-lg text-sm font-medium font-['Roboto_Serif']">
@@ -234,14 +234,14 @@ const Creator = () => {
               </div>
 
               {/* Images Row */}
-              <div className="flex mt-2">
+              <div className="w-full flex justify-center items-center h-full py-2">
                 <motion.img
                   initial={{ x: 20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: 0.9 }}
                   src="/Creatorpage/group3.png"
                   alt="Frame 5"
-                  className="h-24 md:h-28 lg:h-32 lg:w-[54%] md:w-[58%] w-[50%]"
+                  className="h-22 md:h-28 lg:h-32 xl:h-36 lg:w-[54%] xl:w-[45%] md:w-[58%] w-[50%]"
                 />
                 <motion.img
                   initial={{ x: 20, opacity: 0 }}
@@ -254,7 +254,7 @@ const Creator = () => {
                   }}
                   src="/Creatorpage/frame4.png"
                   alt="Frame 6"
-                  className="lg:w-auto xl:w-52 w-32 md:w-44 h-24 md:h-24 lg:h-30 lg:mt-0 md:-mt-0 md:ml-3 lg:ml-5 ml-5 mt-0"
+                  className="lg:w-auto xl:w-52 w-32 md:w-44 h-22 md:h-24 lg:h-30 lg:mt-0 md:-mt-0 md:ml-3 lg:ml-5 ml-5 mt-0"
                 />
               </div>
             </motion.a>
