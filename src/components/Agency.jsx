@@ -202,7 +202,7 @@ const Agency = () => {
 </div>
 
 
-      {/* Why Agencies Choose Starflare */}
+      {/* Why Agencies Choose Starflare here */}
       <div className="w-full flex flex-col items-center justify-center pt-10 px-5">
         {/* Heading */}
         <div className="text-center max-w-4xl pt-20">
