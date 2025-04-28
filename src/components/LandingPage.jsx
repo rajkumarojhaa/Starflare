@@ -9,29 +9,29 @@ const LandingPage = () => {
   const [activeCard, setActiveCard] = useState(0);
 
   const images = [
-    "/Brandpage/Frame238439.png",
-    "/Brandpage/Group238394.png",
-    "/Brandpage/Group238398.png",
+    "/Landingpage/common/Frame1.png",
+    "/Landingpage/common/Frame2.png",
+    "/Landingpage/common/Frame3.png",
   ];
 
   const cards = [
     {
-      icon: "/conditions.png",
-      title: "Discover Talent",
+      icon: "/Number1.png",
+      title: "Find the Right Creators",
       description:
-        "Filter and connect with verified creators who align with your brand.",
+        "AI-powered matching delivers hyper-accurate targeting with precision.",
     },
     {
-      icon: "/campaign.png",
-      title: "Set Campaign Objectives",
+      icon: "/Number2.png",
+      title: "Manage Campaigns Effortlessly",
       description:
-        "Filter and connect with verified creators who align with your brand.",
+        "Track progress, automate workflows, and streamline payments.",
     },
     {
-      icon: "/barchart.png",
-      title: "Monitor & Optimize",
+      icon: "/Number3.png",
+      title: "Scale with Data-Driven Insights",
       description:
-        "Filter and connect with verified creators who align with your brand.",
+        "Real-time analytics and performance tracking.",
     },
   ];
 
