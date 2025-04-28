@@ -22,13 +22,13 @@ const LandingPage = () => {
         "AI-powered matching delivers hyper-accurate targeting with precision.",
     },
     {
-      icon: "/Number1.png",
+      icon: "/Number2.png",
       title: "Manage Campaigns Effortlessly",
       description:
         "Track progress, automate workflows, and streamline payments.",
     },
     {
-      icon: "/Number1.png",
+      icon: "/Number3.png",
       title: "Scale with Data-Driven Insights",
       description:
         "Real-time analytics and performance tracking.",
