@@ -1,163 +1,126 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Blog = () => {
-  const tags = [
-    "Trending",
-    "AI",
-    "2025",
-    "Influencer",
-    "Travel Influencer",
-    "Influencer Market",
-    "Apple 17 Pro Max",
-    "New Launch",
-  ];
+const Blog8 = () => {
+  const navigate = useNavigate();
 
-  const leftImages = ["/Blogpage/leftimage.png"];
-
-  const rightImages = ["/Blogpage/rightimage.png"];
-
-  const cards = [
-    {
-      title: "The Best Influencer Marketing and UGC Creators Platforms in 2024",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog1/1.png",
-      link: "/Blog1",
-    },
-    {
-      title: "Why Influencer Marketing is important in 2024",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogpage/Blog2.png",
-      link: "/Blog2",
-    },
-    {
-      title: "The Importance of Authenticity in Influencer Marketing",
-      tag: "AI",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog3/banner.png",
-      link: "/Blog3",
-    },
-    {
-      title: "The Future of Influencer Marketing",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog4/banner.png",
-      link: "/Blog4",
-    },
-    {
-      title: "Simplifying Payments in Influencer Marketing with Starflare",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog5/1.jpg",
-      link: "/Blog5",
-    },
-    {
-      title: "Revolutionizing Marketing: Artificial Intelligence and Starflare",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog6/1.png",
-      link: "/Blog6",
-    },
-    {
-      title:
-        "Navigating the Evolving Landscape of Influencer Marketing in 2024",
-      tag: "AI",
-      time: "5 MIN READ",
-      image: "/Blogpage/Card1.png",
-      link: "/Blog7",
-    },
-    {
-      title:
-        "Influencer Marketing with AI: Revolutionizing the Digital Landscape",
-      tag: "Content Create",
-      time: "5 MIN READ",
-      image: "/Blogs/Blog8/1.png",
-      link: "/Blog8",
-    },
-  ];
-
-  const renderImageGrid = (images) => (
-    <div className="flex flex-col gap-4">
-      {images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt="blog"
-          className="w-sm h-2xs object-cover"
-        />
-      ))}
-    </div>
-  );
+  const goBackOrHome = () => {
+    navigate(-1);
+  };
 
   return (
-    <>
-      <section className="w-full bg-[#181818] text-white py-16">
-        <div className="w-full max-w-full mx-auto flex flex-col lg:flex-row justify-between gap-12 lg:min-h-[300px] py-16">
-          {/* Left Images */}
-          <div className="hidden lg:flex lg:flex-col gap-4 justify-start">
-            {renderImageGrid(leftImages)}
-          </div>
-
-          {/* Center Text and Tags */}
-          <div className="flex-1 text-center flex flex-col justify-center">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8">
-              Read Our Blog
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="bg-zinc-800 px-4 py-2 rounded-md text-sm font-medium"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Images */}
-          <div className="hidden lg:flex lg:flex-col gap-4 justify-end">
-            {renderImageGrid(rightImages)}
-          </div>
+    <div className="min-h-screen bg-zinc-800 text-white py-32">
+      {/* Main Content */}
+      <div className="container mx-auto px-4">
+        <div className="mb-3">
+          <button onClick={goBackOrHome} className="bg-black rounded px-4 py-2 text-white font-semibold shadow hover:opacity-80 transition flex items-center gap-2">
+            <i className="fas fa-arrow-left mr-2"></i> Back
+          </button>
         </div>
-      </section>
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">
+          Influencer Marketing with <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">AI</span>: Revolutionizing the Digital Landscape
+        </h1>
 
-      {/* cards section  */}
-      <section className="bg-[#181818] py-10 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-zinc-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow"
-            >
+        {/* Introduction Section */}
+        <section className="py-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
               <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-48 object-cover rounded-2xl p-2"
+                src="/Blogs/Blog8/1.png"
+                alt="Digital Landscape"
+                className="w-full rounded-lg shadow-lg"
               />
-              <div className="p-4 text-white">
-                <div className="flex items-center gap-2 text-sm mb-2">
-                  <span className="bg-white text-black px-2 py-0.5 rounded-full text-xs font-medium">
-                    {card.tag}
-                  </span>
-                  <span className="text-zinc-400 font-medium">{card.time}</span>
-                </div>
-                <h3 className="text-base font-semibold mb-2">{card.title}</h3>
-                <Link
-                  to={card.link}
-                  className="text-blue-400 hover:underline text-sm font-medium"
-                >
-                  Read more
-                </Link>
-              </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
+            <div>
+              <p className="text-lg text-gray-300">
+                In the ever-evolving realm of digital marketing, influencer marketing stands out as a powerful strategy for brands to connect with their target audience authentically. As technology continues to advance, the integration of artificial intelligence (AI) into influencer marketing is revolutionizing the way brands engage with influencers and manage their campaigns.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* What is Influencer Marketing with AI Section */}
+        <section className="py-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <h4 className="text-2xl font-semibold mb-4">What is Influencer Marketing with AI?</h4>
+              <p className="text-gray-300">
+                Influencer marketing with AI combines the strengths of influencer collaboration with the capabilities of artificial intelligence technology. AI algorithms analyze vast amounts of data to identify relevant influencers, predict campaign performance, optimize content, and measure ROI. By leveraging AI, brands can streamline their influencer marketing efforts, enhance targeting precision, and drive better results.
+              </p>
+            </div>
+            <div className="order-1 md:order-2">
+              <img
+                src="/Blogs/Blog8/2.png"
+                alt="AI in Influencer Marketing"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Starflare Introduction Section */}
+        <section className="py-8">
+          <h4 className="text-2xl font-semibold mb-4">
+            Introducing <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Starflare</span>: The Pioneer in AI-Powered Influencer Marketing
+          </h4>
+          <p className="text-gray-300 mb-4">
+            Among the pioneers in this space is Starflare, the first platform to revolutionize influencer marketing with artificial intelligence. Founded with the vision of transforming the influencer marketing landscape, Starflare offers innovative AI-driven solutions that empower brands, influencers, and agencies to thrive in the digital age.
+          </p>
+          <p className="text-gray-300">
+            Starflare's AI-powered platform provides a comprehensive suite of tools and features designed to streamline the influencer marketing process. From influencer discovery and campaign management to performance tracking and analytics, Starflare's intelligent algorithms optimize every aspect of the influencer marketing journey.
+          </p>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-8">
+          <h4 className="text-2xl font-semibold mb-6">Unlocking the Potential of Influencer Marketing with Starflare</h4>
+          <p className="text-gray-300 mb-6">
+            With Starflare, brands can unlock the full potential of influencer marketing by harnessing the power of AI. The platform enables brands to:
+          </p>
+          <div className="bg-gray-800 rounded-lg p-6 space-y-6">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Discover the Right Influencers</h4>
+              <p className="text-gray-300">
+                AI algorithms analyze audience demographics, engagement metrics, and content relevance to identify the most suitable influencers for each campaign.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Optimize Campaign Performance</h4>
+              <p className="text-gray-300">
+                Starflare's AI continually analyzes campaign data to optimize content, targeting, and messaging, ensuring maximum impact and ROI.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Streamline Campaign Management</h4>
+              <p className="text-gray-300">
+                From collaboration and content creation to scheduling and reporting, Starflare automates and streamlines every aspect of campaign management, saving time and resources.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">Measure and Analyze Results</h4>
+              <p className="text-gray-300">
+                Comprehensive analytics dashboards provide real-time insights into campaign performance, allowing brands to track ROI, engagement metrics, and audience sentiment.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion Section */}
+        <section className="py-8">
+          <h4 className="text-2xl font-semibold mb-4">Join the AI-Powered Influencer Marketing Revolution with Starflare</h4>
+          <p className="text-gray-300 mb-4">
+            As brands navigate the rapidly evolving digital landscape, Starflare offers a cutting-edge solution to elevate their influencer marketing efforts. By harnessing the power of AI, Starflare empowers brands to drive meaningful connections, maximize ROI, and stay ahead of the competition in today's dynamic market.
+          </p>
+          <p className="text-gray-300">
+            Discover the future of influencer marketing with Starflare and unlock new opportunities for growth and success. Join the AI-powered influencer marketing revolution today!
+          </p>
+        </section>
+      </div>
+
+      {/* Footer */}
+      
+    </div>
   );
 };
 
-export default Blog;
+export default Blog8; 

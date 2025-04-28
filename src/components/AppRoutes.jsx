@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -25,14 +24,14 @@ const AppRoutes = () => {
         <Route path="/agency" element={<Agency />} />
         <Route path="/creator" element={<Creator />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/blog1" element={<Blog1 />} />
-        <Route path="/blog/blog2" element={<Blog2 />} />
-        <Route path="/blog/blog3" element={<Blog3 />} />
-        <Route path="/blog/blog4" element={<Blog4 />} />
-        <Route path="/blog/blog5" element={<Blog5 />} />
-        <Route path="/blog/blog6" element={<Blog6 />} />
-        <Route path="/blog/blog7" element={<Blog7 />} />
-        <Route path="/blog/blog8" element={<Blog8 />} />
+        <Route path="/Blog1" element={<Blog1 />} />
+        <Route path="/Blog2" element={<Blog2 />} />
+        <Route path="/Blog3" element={<Blog3 />} />
+        <Route path="/Blog4" element={<Blog4 />} />
+        <Route path="/Blog5" element={<Blog5 />} />
+        <Route path="/Blog6" element={<Blog6 />} />
+        <Route path="/Blog7" element={<Blog7 />} />
+        <Route path="/Blog8" element={<Blog8 />} />        
       </Route>
     </Routes>
   );
